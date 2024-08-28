@@ -1,0 +1,17 @@
+<h1 id="header" style="color:blue; font-family: '굴림체'; font-size: 50px; text-align: center;">
+	월간 향유회
+</h1>
+<script>
+	function flashtext(ele, col) {
+		var tmpColCheck = document.getElementById( ele ).style.color;
+		if (tmpColCheck === 'silver') {
+			document.getElementById( ele ).style.color = col;
+		} else {
+			document.getElementById( ele ).style.color = 'silver';
+		}
+	} 
+
+	setInterval(function() {
+		flashtext('header','blue');
+	}, 50 );
+</script>
