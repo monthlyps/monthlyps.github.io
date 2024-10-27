@@ -36,10 +36,17 @@ const contests = await getSortedContests()
       <h1 class="my-16 text-5xl text-center font-black">명예의 전당</h1>
     </header>
     <main
-      class="mx-auto lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"
+      class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"
     >
       {contests.map(({ id, data }) => <WinnerCard id={id} data={data} />)}
     </main>
+    <footer class="b-t b-solid b-light-9 dark:b-dark-3">
+      <div
+        class="mx-auto lg:max-w-6xl md:max-w-4xl text-sm py-4 px-4 text-gray-4"
+      >
+        &copy; 2024 kiwiyou
+      </div>
+    </footer>
     <script>
       applyTheme()
       const toggleButton = document.querySelector("[data-toggle-theme]")
