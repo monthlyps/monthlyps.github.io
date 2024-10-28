@@ -10,8 +10,14 @@ const {
   id,
   data: { date, top },
 } = Astro.props
-const [year, month] = id.split("-")
+const [year, month, tag] = id.split("-", 3)
 const [first, second, third] = top
+
+const TAG_DISPLAY_NAME = new Map([
+  ["open", "Open Contest"],
+  ["onsite", "Onsite"],
+])
+const tagDisplayName = TAG_DISPLAY_NAME.get(tag)
 ---
 
 <article
@@ -22,7 +28,9 @@ const [first, second, third] = top
       <span class="text-xl font-bold tabular-nums">{month}</span>
       <span class="tabular-nums">{year}</span>
     </div>
-    <span class="text-dark-1 dark:text-light-9">{date}</span>
+    <span class="text-dark-1 dark:text-light-9"
+      >{date}{tagDisplayName && ` (${tagDisplayName})`}</span
+    >
   </div>
   <ol class="grid grid-cols-2 items-end">
     <li

@@ -11,7 +11,10 @@ const contests = await getSortedContests()
 <html lang="ko" class="font-sans tracking-tighter">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>월간 향유회 - 명예의 전당</title>
@@ -20,10 +23,11 @@ const contests = await getSortedContests()
     <header>
       <nav class="b-b b-solid b-light-9 dark:b-dark-3">
         <div
-          class="mx-auto lg:max-w-6xl md:max-w-4xl text-xl py-2 px-4 font-bold flex flex-row"
+          class="mx-auto lg:max-w-6xl md:max-w-4xl text-5 py-2 px-4 font-bold flex flex-row"
         >
           <span class="flex-1"
-            ><a class="text-unset decoration-none" href="/">월간 향유회</a
+            ><a class="text-unset decoration-none flex flex-row items-center gap-2" href="/"
+              ><img class="h-5" src="/logo.webp" /> 월간 향유회</a
             ></span
           >
           <button type="button" data-toggle-theme
