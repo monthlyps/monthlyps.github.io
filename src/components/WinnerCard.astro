@@ -1,19 +1,17 @@
 ---
 import type { InferEntrySchema } from "astro:content"
 import { getTagValue } from "~/lib/getTagValue"
+import { getTop } from "~/lib/getTop"
 import UserRef from "./UserRef.astro"
 
 type Props = {
   id: string
-  data: InferEntrySchema<"contests">
+  contest: InferEntrySchema<"contests">
 }
 
-const {
-  id,
-  data: { date, top },
-} = Astro.props
+const { id, contest } = Astro.props
 const [year, month, tag] = id.split("-", 3)
-const [first, second, third] = top
+const [first, second, third] = getTop(contest)
 
 const tagValue = getTagValue(tag)
 ---
@@ -27,7 +25,7 @@ const tagValue = getTagValue(tag)
       <span class="tabular-nums">{year}</span>
     </div>
     <span class="text-dark-1 dark:text-light-9">
-      {date}{tagValue && ` (${tagValue})`}
+      {contest.date}{tagValue && ` (${tagValue})`}
     </span>
   </div>
   <ol class="grid grid-cols-2 items-end">
@@ -38,7 +36,7 @@ const tagValue = getTagValue(tag)
       <span
         class="font-bold text-4xl italic transition-transform hover:translate-y-[-0.25rem]"
       >
-        <UserRef handle={first.handle} />
+        <UserRef handle={first.name} />
       </span>
     </li>
     <li
@@ -46,13 +44,13 @@ const tagValue = getTagValue(tag)
     >
       <span class="font-bold text-bluegray-6 dark:text-bluegray-4">2위</span>
       <span class="transition-transform hover:translate-y-[-0.25rem]">
-        <UserRef handle={second.handle} />
+        <UserRef handle={second.name} />
       </span>
     </li>
     <li class="text-lg flex flex-row justify-between p-4 items-end">
       <span class="font-bold text-amber-7">3위</span>
       <span class="transition-transform hover:translate-y-[-0.25rem]">
-        <UserRef handle={third.handle} />
+        <UserRef handle={third.name} />
       </span>
     </li>
   </ol>

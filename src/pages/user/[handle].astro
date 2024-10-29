@@ -1,57 +1,60 @@
 ---
 import type { GetStaticPaths } from "astro"
+import { getCollection } from "astro:content"
 import Layout from "~/layout/Layout.astro"
 import { getSortedContests } from "~/lib/getSortedContests"
-import { getTagValue } from "~/lib/getTagValue"
+import { getTop } from "~/lib/getTop"
 
 export const getStaticPaths = (async () => {
-  const contests = await getSortedContests()
-  return [
-    ...new Set(
-      contests.flatMap(({ data }) => data.top.map(({ handle }) => handle))
-    ),
-  ].map((handle) => ({
-    params: { handle },
-  }))
+  const collection = await getCollection("contests")
+  return [...new Set(collection.flatMap(({ data }) => data.participants))].map(
+    (handle) => ({
+      params: { handle },
+    })
+  )
 }) satisfies GetStaticPaths
 
 const contests = await getSortedContests()
 const { handle } = Astro.params
-const contestLog = contests
-  .map((contest) => {
-    const { date } = contest.data
-    const [year, month, tag] = contest.id.split("-", 3)
-    const tagValue = getTagValue(tag)
-    const tagName = tagValue ? ` ${tagValue}` : ""
-    return {
-      title: `${year}년 ${month}월${tagName}`,
-      date,
-      rank: contest.data.top.findIndex((user) => user.handle === handle) + 1,
-    }
-  })
-  .filter(({ rank }) => rank > 0)
+const contestLog = contests.flatMap(({ data: contest }) => {
+  const top = getTop(contest)
+  const index = top.findIndex((user) => user.name === handle)
+  if (index === -1) return []
+  const { solve, penalty, rank } = top[index]
+  return {
+    title: contest.title,
+    rank,
+    solve,
+    penalty,
+  }
+})
 ---
 
 <Layout title="월간 향유회">
-  <span slot="header-title" class="px-4"><span>{handle}의</span> <span class="whitespace-nowrap">대회 기록</span></span>
+  <span slot="header-title" class="px-4"
+    ><span>{handle}의</span>
+    <span class="whitespace-nowrap">대회 기록</span></span
+  >
   <main class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl px-4">
     <table
-      class="w-full [&_tr]:b-b [&_tr]:b-light-9 [&_td]:p-4 dark:[&_tr]:b-dark-3 [&_tr]:transition [&_tr]:transition-property-[background-color] hover:[&_tr]:bg-light-3 hover:dark:[&_tr]:bg-dark-6"
+      class="w-full [&_tr]:b-b [&_tr]:b-light-9 [&_td]:py-4 [&_td]:px-1 dark:[&_tr]:b-dark-3 [&_tr]:transition [&_tr]:transition-property-[background-color] hover:[&_tr]:bg-light-3 hover:dark:[&_tr]:bg-dark-6"
     >
       <thead class="text-gray-4">
         <tr>
-          <td>대회 기준월</td>
-          <td>개최일자</td>
-          <td>순위</td>
+          <td>제목</td>
+          <td class="min-w-18">순위</td>
+          <td class="min-w-12">해결</td>
+          <td class="min-w-18">페널티</td>
         </tr>
       </thead>
       <tbody>
         {
-          contestLog.map(({ title, date, rank }) => (
+          contestLog.map(({ title, rank, solve, penalty }) => (
             <tr>
               <td>{title}</td>
-              <td>{date}</td>
               <td>{rank}위</td>
+              <td>{solve}</td>
+              <td>{penalty}분</td>
             </tr>
           ))
         }
