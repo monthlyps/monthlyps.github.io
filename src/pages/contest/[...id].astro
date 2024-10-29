@@ -78,7 +78,7 @@ const top = getTop(contest)
         {
           top.map(({ name, solve, totalPenalty, rank }) => (
             <tr>
-              <td>{rank}위</td>
+              <td class={rank <= 3 ? `rank-${rank}` : null}>{rank}위</td>
               <td class="hover">
                 <UserRef handle={name} />
               </td>

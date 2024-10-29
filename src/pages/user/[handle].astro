@@ -66,7 +66,7 @@ const path = [
               <td class="hover">
                 <a href={`/contest/${slug}`}>{title}</a>
               </td>
-              <td>{rank}위</td>
+              <td class={rank <= 3 ? `rank-${rank}` : null}>{rank}위</td>
               <td>{solve}</td>
               <td>{penalty}분</td>
             </tr>
