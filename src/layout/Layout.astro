@@ -55,7 +55,7 @@ const { title } = Astro.props
         localStorage.setItem("theme", newTheme)
         applyTheme(newTheme)
       })
-      function applyTheme(to) {
+      function applyTheme(to?: string) {
         const localTheme = to ?? localStorage.getItem("theme")
         const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
         const theme = localTheme ?? preferredTheme
