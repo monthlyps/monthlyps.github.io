@@ -1,6 +1,5 @@
 ---
 import type { InferEntrySchema } from "astro:content"
-import { getRankClass } from "~/lib/getRankClass"
 import { getTagValue } from "~/lib/getTagValue"
 import { getTop } from "~/lib/getTop"
 import UserRef from "./UserRef.astro"
@@ -36,7 +35,7 @@ const tagValue = getTagValue(tag)
     <li
       class="text-xl flex flex-row justify-between p-4 items-end b-b b-solid b-light-8 pt-0 grid-col-span-2 dark:b-dark-3"
     >
-      <span class={`font-bold text-amber-5 ${getRankClass(1)}`}>1위</span>
+      <span class={`font-bold text-amber-5 rank-1`}>1위</span>
       <span class="font-bold text-4xl italic hover">
         <UserRef handle={first.name} />
       </span>
@@ -44,8 +43,7 @@ const tagValue = getTagValue(tag)
     <li
       class="text-lg flex flex-row justify-between p-4 items-end b-r b-solid b-light-8 dark:b-dark-3"
     >
-      <span
-        class={`font-bold text-bluegray-6 dark:text-bluegray-4 ${getRankClass(2)}`}
+      <span class={`font-bold text-bluegray-6 dark:text-bluegray-4 rank-2`}
         >2위</span
       >
       <span class="hover">
@@ -53,7 +51,7 @@ const tagValue = getTagValue(tag)
       </span>
     </li>
     <li class="text-lg flex flex-row justify-between p-4 items-end">
-      <span class={`font-bold text-amber-7 ${getRankClass(3)}`}>3위</span>
+      <span class={`font-bold text-amber-7 rank-3`}>3위</span>
       <span class="hover">
         <UserRef handle={third.name} />
       </span>

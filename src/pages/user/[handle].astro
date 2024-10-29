@@ -3,7 +3,6 @@ import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
 import type { Path } from "~/components/Nav.astro"
 import Layout from "~/layout/Layout.astro"
-import { getRankClass } from "~/lib/getRankClass"
 import { getSortedContests } from "~/lib/getSortedContests"
 import { getTop } from "~/lib/getTop"
 
@@ -67,7 +66,7 @@ const path = [
               <td class="hover">
                 <a href={`/contest/${slug}`}>{title}</a>
               </td>
-              <td class={rank <= 3 ? getRankClass(rank) : null}>{rank}위</td>
+              <td class={rank <= 3 ? `rank-${rank}` : null}>{rank}위</td>
               <td>{solve}</td>
               <td>{penalty}분</td>
             </tr>
