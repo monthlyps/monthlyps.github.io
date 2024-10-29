@@ -191,34 +191,42 @@ async function fetchBojBoard(id: string): Promise<FetchData | null> {
   }
 }
 async function fetchSpotboard(id: string): Promise<FetchData | null> {
-  const bojInfoRaw = await fetch(
+  const spotboardInfoRaw = await fetch(
     `https://www.acmicpc.net/contest/spotboard/${id}/contest.json`,
     fetchConfig,
   )
-  if (!bojInfoRaw.ok) {
+  if (!spotboardInfoRaw.ok) {
     return null
   }
-  const bojInfoParse = SpotboardInfo.safeParse(await bojInfoRaw.json())
-  if (bojInfoParse.error != null) {
-    console.error("failed to parse spotboard info.json", bojInfoParse.error)
+  const spotboardInfoParse = SpotboardInfo.safeParse(
+    await spotboardInfoRaw.json(),
+  )
+  if (spotboardInfoParse.error != null) {
+    console.error(
+      "failed to parse spotboard contest.json",
+      spotboardInfoParse.error,
+    )
     return null
   }
-  const { data: contest } = bojInfoParse
-  const bojRunsRaw = await fetch(
+  const { data: contest } = spotboardInfoParse
+  const spotboardRuns = await fetch(
     `https://www.acmicpc.net/contest/spotboard/${id}/runs.json`,
     fetchConfig,
   )
-  if (!bojRunsRaw.ok) {
+  if (!spotboardRuns.ok) {
     return null
   }
-  const bojRunsParse = SpotboardRuns.safeParse(await bojRunsRaw.json())
-  if (bojRunsParse.error != null) {
-    console.error("failed to parse spotboard info.json", bojRunsParse.error)
+  const spotboardRunsParse = SpotboardRuns.safeParse(await spotboardRuns.json())
+  if (spotboardRunsParse.error != null) {
+    console.error(
+      "failed to parse spotboard runs.json",
+      spotboardRunsParse.error,
+    )
     return null
   }
   const {
     data: { time, runs },
-  } = bojRunsParse
+  } = spotboardRunsParse
   return {
     title: contest.title,
     durationSeconds: time.contestTime,
