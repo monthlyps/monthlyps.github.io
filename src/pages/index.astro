@@ -11,6 +11,6 @@ const contests = await getSortedContests()
   <main
     class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"
   >
-    {contests.map(({ id, data }) => <WinnerCard id={id} data={data} />)}
+    {contests.map(({ id, data }) => <WinnerCard id={id} contest={data} />)}
   </main>
 </Layout>

@@ -9,11 +9,25 @@ const contests = defineCollection({
   }),
   schema: z.object({
     date: z.string(),
-    top: z.array(
+    bojId: z.string(),
+    title: z.string(),
+    durationSeconds: z.number(),
+    participants: z.array(z.string()),
+    problems: z.array(
       z.object({
-        handle: z.string(),
+        title: z.string(),
+        number: z.string(),
       }),
     ),
+    runs: z.array(
+      z.object({
+        who: z.string(),
+        problem: z.string(),
+        result: z.enum(["ACCEPTED", "INCORRECT"]),
+        submissionMinute: z.number(),
+      }),
+    ),
+    boardType: z.enum(["boj", "spotboard"]),
   }),
 })
 
