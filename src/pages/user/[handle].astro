@@ -17,16 +17,17 @@ export const getStaticPaths = (async () => {
 
 const contests = await getSortedContests()
 const { handle } = Astro.params
-const contestLog = contests.flatMap(({ data: contest }) => {
+const contestLog = contests.flatMap(({ id, data: contest }) => {
   const top = getTop(contest)
   const index = top.findIndex((user) => user.name === handle)
   if (index === -1) return []
-  const { solve, penalty, rank } = top[index]
+  const { acceptedCount: solve, totalPenalty: penalty, rank } = top[index]
   return {
     title: contest.title,
     rank,
     solve,
     penalty,
+    slug: id.replace("-", "/").replace("-", "/"),
   }
 })
 
@@ -49,10 +50,8 @@ const path = [
     <span class="whitespace-nowrap">대회 기록</span></span
   >
   <main class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl px-4">
-    <table
-      class="w-full [&_tr]:b-b [&_tr]:b-light-9 [&_td]:py-4 [&_td]:px-1 [&_td]:first:pl-2 dark:[&_tr]:b-dark-3 [&_tr]:transition [&_tr]:transition-property-[background-color] hover:[&_tr]:bg-light-3 hover:dark:[&_tr]:bg-dark-6"
-    >
-      <thead class="text-gray-4">
+    <table class="theme-table">
+      <thead>
         <tr>
           <td>제목</td>
           <td class="min-w-18">순위</td>
@@ -62,9 +61,11 @@ const path = [
       </thead>
       <tbody>
         {
-          contestLog.map(({ title, rank, solve, penalty }) => (
+          contestLog.map(({ slug, title, rank, solve, penalty }) => (
             <tr>
-              <td>{title}</td>
+              <td class="hover">
+                <a href={`/contest/${slug}`}>{title}</a>
+              </td>
               <td>{rank}위</td>
               <td>{solve}</td>
               <td>{penalty}분</td>

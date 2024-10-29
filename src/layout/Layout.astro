@@ -67,7 +67,7 @@ const { title, path } = Astro.props
         </div>
       </nav>
       {path && <Nav path={path} />}
-      <h1 class="my-16 text-5xl text-center font-black">
+      <h1 class="my-16 text-5xl font-black flex flex-row justify-center">
         <slot name="header-title" />
       </h1>
     </header>
