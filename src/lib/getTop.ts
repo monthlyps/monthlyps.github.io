@@ -6,6 +6,7 @@ export type TopRecord = {
   name: string
   solve: number
   penalty: number
+  rank: number
 }
 
 export function getTop(contest: InferEntrySchema<"contests">) {
@@ -37,6 +38,7 @@ export function getTop(contest: InferEntrySchema<"contests">) {
     name,
     solve: solves.get(name) ?? 0,
     penalty: penalties.get(name) ?? 0,
+    rank: 0,
   }))
   participants.sort((a, b) => {
     if (a.solve === b.solve) {
@@ -45,5 +47,13 @@ export function getTop(contest: InferEntrySchema<"contests">) {
     }
     return b.solve - a.solve
   })
+  let rank = 1
+  const prevSolve = 0
+  const prevPenalty = 0
+  for (const participant of participants) {
+    if (prevSolve !== participant.solve || prevPenalty !== participant.penalty)
+      rank++
+    participant.rank = rank
+  }
   return participants
 }

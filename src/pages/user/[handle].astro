@@ -20,10 +20,10 @@ const contestLog = contests.flatMap(({ data: contest }) => {
   const top = getTop(contest)
   const index = top.findIndex((user) => user.name === handle)
   if (index === -1) return []
-  const { solve, penalty } = top[index]
+  const { solve, penalty, rank } = top[index]
   return {
     title: contest.title,
-    rank: index + 1,
+    rank,
     solve,
     penalty,
   }
