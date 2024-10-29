@@ -1,0 +1,9 @@
+---
+type Props = {
+  handle: string
+}
+
+const { handle } = Astro.props
+---
+
+<a href={`/user/${handle}`}>{handle}</a>

@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Format
-        run: pnpm fmt
+        run: pnpm prettier --check .
   lint:
     runs-on: ubuntu-latest
     steps:

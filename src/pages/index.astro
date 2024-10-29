@@ -1,6 +1,6 @@
 ---
-import Layout from '~/layout/Layout.astro'
-import WinnerCard from '~/components/WinnerCard.astro'
+import WinnerCard from "~/components/WinnerCard.astro"
+import Layout from "~/layout/Layout.astro"
 import { getSortedContests } from "~/lib/getSortedContests"
 
 const contests = await getSortedContests()
@@ -8,5 +8,9 @@ const contests = await getSortedContests()
 
 <Layout title="월간 향유회 - 명예의 전당">
   <span slot="header-title">명예의 전당</span>
-  {contests.map(({ id, data }) => <WinnerCard id={id} data={data} />)}
+  <main
+    class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"
+  >
+    {contests.map(({ id, data }) => <WinnerCard id={id} data={data} />)}
+  </main>
 </Layout>
