@@ -2,6 +2,11 @@ import { defineConfig, presetUno } from "unocss"
 
 export default defineConfig({
   presets: [presetUno()],
+  shortcuts: {
+    "rank-1": "font-bold text-amber-5",
+    "rank-2": "font-bold text-bluegray-6 dark:text-bluegray-4",
+    "rank-3": "font-bold text-amber-7",
+  },
   theme: {
     fontFamily: {
       sans: 'Inter, "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
