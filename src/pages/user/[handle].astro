@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
+import type { Path } from "~/components/Nav.astro"
 import Layout from "~/layout/Layout.astro"
 import { getSortedContests } from "~/lib/getSortedContests"
 import { getTop } from "~/lib/getTop"
@@ -28,9 +29,21 @@ const contestLog = contests.flatMap(({ data: contest }) => {
     penalty,
   }
 })
+
+const path = [
+  {
+    name: "홈",
+    url: "/",
+  },
+  "참가자",
+  {
+    name: handle,
+    url: Astro.url.pathname,
+  },
+] satisfies Path
 ---
 
-<Layout title="월간 향유회">
+<Layout title={`월간 향유회 - ${handle} 정보`} path={path}>
   <span slot="header-title" class="px-4"
     ><span>{handle}의</span>
     <span class="whitespace-nowrap">대회 기록</span></span
