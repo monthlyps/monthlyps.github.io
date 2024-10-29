@@ -3,11 +3,13 @@ import type { InferEntrySchema } from "astro:content"
 
 type Props = {
   id: string
+  handle: string
   data: InferEntrySchema<"contests">
 }
 
 const {
   id,
+  handle,
   data: { date, top },
 } = Astro.props
 const [year, month, tag] = id.split("-", 3)
@@ -28,28 +30,20 @@ const tagDisplayName = TAG_DISPLAY_NAME.get(tag)
       <span class="text-xl font-bold tabular-nums">{month}</span>
       <span class="tabular-nums">{year}</span>
     </div>
-    <span class="text-dark-1 dark:text-light-9">
-      {date}{tagDisplayName && ` (${tagDisplayName})`}
-    </span>
+    <span class="text-dark-1 dark:text-light-9"
+      >{date}{tagDisplayName && ` (${tagDisplayName})`}</span
+    >
   </div>
-  <ol class="grid grid-cols-2 items-end">
-    <li
-      class="text-xl flex flex-row justify-between p-4 items-end b-b b-solid b-light-8 pt-0 grid-col-span-2 dark:b-dark-3"
-    >
+  <div class="text-xl flex flex-row justify-between p-4 items-end b-b b-solid b-light-8 pt-0 grid-col-span-2 dark:b-dark-3">
+    {first.handle === handle && (
       <span class="font-bold text-amber-5">1위</span>
-      <a href={`/users/${first.handle}`} class="font-bold text-4xl italic">
-        {first.handle}
-      </a>
-    </li>
-    <li
-      class="text-lg flex flex-row justify-between p-4 items-end b-r b-solid b-light-8 dark:b-dark-3"
-    >
-      <span class="font-bold text-bluegray-6 dark:text-bluegray-4">2위</span>
-      <a href={`/users/${second.handle}`}>{second.handle}</a>
-    </li>
-    <li class="text-lg flex flex-row justify-between p-4 items-end">
+      )}
+    {second.handle === handle && (
+      <span class="font-bold text-bluegray-6">2위</span>
+    )}
+    {third.handle === handle && (
       <span class="font-bold text-amber-7">3위</span>
-      <a href={`/users/${third.handle}`}>{third.handle}</a>
-    </li>
+    )}
+    <span class="font-bold text-3xl italic">{handle}</span>
   </ol>
 </article>
