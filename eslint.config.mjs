@@ -9,6 +9,6 @@ export default [
   ),
   eslintConfigPrettier,
   {
-    ignores: [".astro"],
+    ignores: [".astro", "dist"],
   },
 ]

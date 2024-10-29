@@ -37,14 +37,14 @@ const contestLog = contests.flatMap(({ data: contest }) => {
   >
   <main class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl px-4">
     <table
-      class="w-full [&_tr]:b-b [&_tr]:b-light-9 [&_td]:p-4 dark:[&_tr]:b-dark-3 [&_tr]:transition [&_tr]:transition-property-[background-color] hover:[&_tr]:bg-light-3 hover:dark:[&_tr]:bg-dark-6"
+      class="w-full [&_tr]:b-b [&_tr]:b-light-9 [&_td]:py-4 [&_td]:px-1 dark:[&_tr]:b-dark-3 [&_tr]:transition [&_tr]:transition-property-[background-color] hover:[&_tr]:bg-light-3 hover:dark:[&_tr]:bg-dark-6"
     >
       <thead class="text-gray-4">
         <tr>
           <td>제목</td>
-          <td>순위</td>
-          <td>푼 문제 수</td>
-          <td>페널티</td>
+          <td class="min-w-18">순위</td>
+          <td class="min-w-12">해결</td>
+          <td class="min-w-18">페널티</td>
         </tr>
       </thead>
       <tbody>
