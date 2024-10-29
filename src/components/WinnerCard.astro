@@ -10,6 +10,7 @@ type Props = {
 }
 
 const { id, contest } = Astro.props
+const slug = id.replace("-", "/").replace("-", "/")
 const [year, month, tag] = id.split("-", 3)
 const [first, second, third] = getTop(contest)
 
@@ -17,25 +18,25 @@ const tagValue = getTagValue(tag)
 ---
 
 <article
-  class="rounded-lg b b-solid b-light-8 shadow-md flex flex-col overflow-hidden dark:b-dark-3"
+  class="rounded-lg b b-solid b-light-8 shadow-md flex flex-col overflow-hidden dark:b-dark-3 hover"
 >
-  <div class="flex flex-row justify-between p-4">
-    <div class="flex flex-col items-center self-start">
-      <span class="text-xl font-bold tabular-nums">{month}</span>
-      <span class="tabular-nums">{year}</span>
+  <a href={`/contest/${slug}`}>
+    <div class="flex flex-row justify-between p-4">
+      <div class="flex flex-col items-center self-start">
+        <span class="text-xl font-bold tabular-nums">{month}</span>
+        <span class="tabular-nums">{year}</span>
+      </div>
+      <span class="text-dark-1 dark:text-light-9">
+        {contest.date}{tagValue && ` (${tagValue})`}
+      </span>
     </div>
-    <span class="text-dark-1 dark:text-light-9">
-      {contest.date}{tagValue && ` (${tagValue})`}
-    </span>
-  </div>
+  </a>
   <ol class="grid grid-cols-2 items-end">
     <li
       class="text-xl flex flex-row justify-between p-4 items-end b-b b-solid b-light-8 pt-0 grid-col-span-2 dark:b-dark-3"
     >
       <span class="font-bold text-amber-5">1위</span>
-      <span
-        class="font-bold text-4xl italic transition-transform hover:translate-y-[-0.25rem]"
-      >
+      <span class="font-bold text-4xl italic hover">
         <UserRef handle={first.name} />
       </span>
     </li>
@@ -43,13 +44,13 @@ const tagValue = getTagValue(tag)
       class="text-lg flex flex-row justify-between p-4 items-end b-r b-solid b-light-8 dark:b-dark-3"
     >
       <span class="font-bold text-bluegray-6 dark:text-bluegray-4">2위</span>
-      <span class="transition-transform hover:translate-y-[-0.25rem]">
+      <span class="hover">
         <UserRef handle={second.name} />
       </span>
     </li>
     <li class="text-lg flex flex-row justify-between p-4 items-end">
       <span class="font-bold text-amber-7">3위</span>
-      <span class="transition-transform hover:translate-y-[-0.25rem]">
+      <span class="hover">
         <UserRef handle={third.name} />
       </span>
     </li>

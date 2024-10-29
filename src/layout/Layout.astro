@@ -4,7 +4,7 @@ import { Moon, Sun } from "lucide-astro"
 import type { Path } from "~/components/Nav.astro"
 import Nav from "~/components/Nav.astro"
 type Props = {
-  title: string
+  title?: string
   path?: Path
 }
 const { title, path } = Astro.props
@@ -19,7 +19,7 @@ const { title, path } = Astro.props
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title == null ? "월간 향유회" : `월간 향유회 - ${title}`}</title>
     <ClientRouter />
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -53,13 +53,13 @@ const { title, path } = Astro.props
         <div
           class="mx-auto lg:max-w-6xl md:max-w-4xl text-5 py-2 px-4 font-bold flex flex-row"
         >
-          <span class="flex-1"
-            ><a
-              class="text-unset decoration-none flex flex-row items-center gap-2"
+          <div class="flex-1">
+            <a
+              class="text-unset decoration-none flex flex-row items-center gap-2 w-fit"
               href="/"><img class="h-5" src="/logo.webp" /> 월간 향유회</a
-            ></span
-          >
-          <button type="button" data-toggle-theme
+            >
+          </div>
+          <button type="button" data-toggle-theme transition:persist
             ><Sun class="dark:hidden" /><Moon
               class="hidden dark:inline"
             /></button
@@ -67,7 +67,7 @@ const { title, path } = Astro.props
         </div>
       </nav>
       {path && <Nav path={path} />}
-      <h1 class="my-16 text-5xl text-center font-black">
+      <h1 class="my-16 text-5xl font-black flex flex-row justify-center">
         <slot name="header-title" />
       </h1>
     </header>

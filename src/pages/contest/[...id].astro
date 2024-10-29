@@ -1,0 +1,110 @@
+---
+import type { GetStaticPaths } from "astro"
+import { getCollection } from "astro:content"
+import { Calendar, CircleX, Clock } from "lucide-astro"
+import type { Path } from "~/components/Nav.astro"
+import UserRef from "~/components/UserRef.astro"
+import Layout from "~/layout/Layout.astro"
+import { getTop } from "~/lib/getTop"
+
+export const getStaticPaths = (async () => {
+  const collection = await getCollection("contests")
+  return collection.map(({ id }) => ({
+    params: { id: id.replace("-", "/").replace("-", "/") },
+  }))
+}) satisfies GetStaticPaths
+
+const collection = await getCollection("contests")
+const { id } = Astro.params
+const actualId = id.replaceAll("/", "-")
+const { data: contest } = collection.find(({ id }) => id === actualId)!
+const path = [
+  {
+    name: "홈",
+    url: "/",
+  },
+  "대회",
+  {
+    name: contest.title,
+    url: Astro.url.pathname,
+  },
+] satisfies Path
+
+const top = getTop(contest)
+---
+
+<Layout title=`${contest.title}` path={path}>
+  <span slot="header-title" class="px-4">{contest.title}</span>
+  <main class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl px-4 flex flex-col gap-4">
+    <div
+      class="flex flex-row gap-2 text-gray-4 [&_span]:flex [&_span]:flex-row [&_span]:gap-2"
+    >
+      <span><Calendar /> {contest.date}</span>
+      <span><Clock /> {(contest.durationSeconds / 60) | 0}분</span>
+      <span><CircleX /> {contest.penalty}분</span>
+    </div>
+    <h2 class="text-xl font-bold">문제</h2>
+    <table class="theme-table">
+      <thead>
+        <tr>
+          <td>번호</td>
+          <td>제목</td>
+          <td>풀이</td>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          contest.problems.map(({ number, title }) => (
+            <tr>
+              <td>{number}</td>
+              <td>{title}</td>
+              <td />
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <h2 class="text-xl font-bold">스코어보드</h2>
+    <table class="theme-table">
+      <thead>
+        <tr>
+          <td>순위</td>
+          <td>참가자</td>
+          {contest.problems.map(({ number }) => <td>{number}</td>)}
+          <td>페널티</td>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          top.map(({ name, solve, totalPenalty, rank }) => (
+            <tr>
+              <td>{rank}위</td>
+              <td class="hover">
+                <UserRef handle={name} />
+              </td>
+              {contest.problems.map(({ number }) => {
+                const problem = solve[number]
+                return (
+                  <td>
+                    {problem.accepted && (
+                      <>
+                        <span>{problem.solvedAt}분</span>
+                        <span>
+                          +{problem.incorrect > 0 ? problem.incorrect : ""}
+                        </span>
+                      </>
+                    )}
+                    {!problem.accepted && problem.incorrect > 0 && (
+                      <span>-{problem.incorrect}</span>
+                    )}
+                  </td>
+                )
+              })}
+              <td>{totalPenalty}분</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </main>
+</Layout>

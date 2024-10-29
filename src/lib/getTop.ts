@@ -2,60 +2,76 @@ import type { InferEntrySchema } from "astro:content"
 
 export type TopRecord = {
   name: string
-  solve: number
-  penalty: number
+  solve: {
+    [number: string]: {
+      accepted: boolean
+      incorrect: number
+      solvedAt: number
+    }
+  }
+  acceptedCount: number
+  totalPenalty: number
   rank: number
 }
 
 export function getTop(contest: InferEntrySchema<"contests">) {
-  const solves = new Map<string, number>()
-  const penalties = new Map<string, number>()
-  const solveds = new Map<string, Set<string>>()
+  const records = new Map<string, TopRecord>(
+    contest.participants.map((name) => [
+      name,
+      {
+        name,
+        solve: Object.fromEntries(
+          contest.problems.map(({ number }) => [
+            number,
+            {
+              accepted: false,
+              incorrect: 0,
+              solvedAt: 0,
+            },
+          ]),
+        ),
+        acceptedCount: 0,
+        totalPenalty: 0,
+        rank: 0,
+      },
+    ]),
+  )
   for (const run of contest.runs) {
-    let solved = solveds.get(run.who)
-    if (solved == null) {
-      solved = new Set()
-      solveds.set(run.who, solved)
-    }
-    if (solved.has(run.problem)) continue
+    const record = records.get(run.who)!
+    const solve = record.solve[run.problem]
+    if (solve.accepted) continue
     switch (run.result) {
       case "ACCEPTED":
-        solves.set(run.who, (solves.get(run.who) ?? 0) + 1)
-        penalties.set(
-          run.who,
-          (penalties.get(run.who) ?? 0) + run.submissionMinute,
-        )
-        solved.add(run.problem)
+        solve.accepted = true
+        solve.solvedAt = run.submissionMinute
+        record.acceptedCount++
+        record.totalPenalty += solve.solvedAt
+        record.totalPenalty += solve.incorrect * contest.penalty
         break
       case "INCORRECT":
-        penalties.set(run.who, (penalties.get(run.who) ?? 0) + contest.penalty)
+        solve.incorrect++
         break
     }
   }
-  const participants = contest.participants.map((name) => ({
-    name,
-    solve: solves.get(name) ?? 0,
-    penalty: penalties.get(name) ?? 0,
-    rank: 0,
-  }))
+  const participants = [...records.values()]
   participants.sort((a, b) => {
     if (a.solve === b.solve) {
-      if (a.penalty === b.penalty) return a.name.localeCompare(b.name)
-      return a.penalty - b.penalty
+      if (a.totalPenalty === b.totalPenalty) return a.name.localeCompare(b.name)
+      return a.totalPenalty - b.totalPenalty
     }
-    return b.solve - a.solve
+    return b.acceptedCount - a.acceptedCount
   })
   let rank = 0
-  let prevSolve = 0
+  let prevAccepted = 0
   let prevPenalty = 0
   for (const participant of participants) {
     if (
-      prevSolve !== participant.solve ||
-      prevPenalty !== participant.penalty
+      prevAccepted !== participant.acceptedCount ||
+      prevPenalty !== participant.totalPenalty
     ) {
       rank++
-      prevSolve = participant.solve
-      prevPenalty = participant.penalty
+      prevAccepted = participant.acceptedCount
+      prevPenalty = participant.totalPenalty
     }
     participant.rank = rank
   }
