@@ -1,0 +1,34 @@
+---
+import type { GetStaticPaths } from "astro"
+import { getCollection } from "astro:content"
+import type { Path } from "~/components/Nav.astro"
+import Layout from "~/layout/Layout.astro"
+
+export const getStaticPaths = (async () => {
+  const collection = await getCollection("contests")
+  return collection.map(({ id }) => ({
+    params: { id: id.replace("-", "/").replace("-", "/") },
+  }))
+}) satisfies GetStaticPaths
+
+const collection = await getCollection("contests")
+const { id } = Astro.params
+const actualId = id.replaceAll("/", "-")
+const { data: contest } = collection.find(({ id }) => id === actualId)!
+const path = [
+  {
+    name: "홈",
+    url: "/",
+  },
+  "대회",
+  {
+    name: contest.title,
+    url: Astro.url.pathname,
+  },
+] satisfies Path
+---
+
+<Layout title=`${contest.title}` path={path}>
+  <span slot="header-title" class="px-4">{contest.title}</span>
+  <main class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl px-4">암것두 업슴</main>
+</Layout>

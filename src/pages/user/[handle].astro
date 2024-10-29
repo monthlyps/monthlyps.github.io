@@ -43,14 +43,14 @@ const path = [
 ] satisfies Path
 ---
 
-<Layout title={`월간 향유회 - ${handle} 정보`} path={path}>
+<Layout title={`${handle} 정보`} path={path}>
   <span slot="header-title" class="px-4"
     ><span>{handle}의</span>
     <span class="whitespace-nowrap">대회 기록</span></span
   >
   <main class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl px-4">
     <table
-      class="w-full [&_tr]:b-b [&_tr]:b-light-9 [&_td]:py-4 [&_td]:px-1 dark:[&_tr]:b-dark-3 [&_tr]:transition [&_tr]:transition-property-[background-color] hover:[&_tr]:bg-light-3 hover:dark:[&_tr]:bg-dark-6"
+      class="w-full [&_tr]:b-b [&_tr]:b-light-9 [&_td]:py-4 [&_td]:px-1 [&_td]:first:pl-2 dark:[&_tr]:b-dark-3 [&_tr]:transition [&_tr]:transition-property-[background-color] hover:[&_tr]:bg-light-3 hover:dark:[&_tr]:bg-dark-6"
     >
       <thead class="text-gray-4">
         <tr>
