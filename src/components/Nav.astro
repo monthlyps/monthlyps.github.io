@@ -1,0 +1,35 @@
+---
+import { ChevronRight } from "lucide-astro"
+
+export type PathComponent = {
+  name: string
+  url: string
+}
+
+export type Path = (string | PathComponent)[]
+
+type Props = {
+  path: Path
+}
+
+const { path } = Astro.props
+---
+
+<nav class="b-b b-solid b-light-9 dark:b-dark-3">
+  <div
+    class="mx-auto lg:max-w-6xl md:max-w-4xl py-2 px-4 flex flex-row justify-start gap-1 text-gray-4"
+  >
+    {
+      path
+        .map((component) => {
+          if (typeof component === "string") {
+            return <span>{component}</span>
+          }
+          return <a href={component.url}>{component.name}</a>
+        })
+        .flatMap((element, index) =>
+          index === 0 ? element : [<ChevronRight />, element]
+        )
+    }
+  </div>
+</nav>

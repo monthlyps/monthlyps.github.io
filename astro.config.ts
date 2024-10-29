@@ -13,4 +13,7 @@ export default defineConfig({
       noExternal: ["pretendard", "@fontsource/inter"],
     },
   },
+  prefetch: {
+    defaultStrategy: "viewport",
+  },
 })

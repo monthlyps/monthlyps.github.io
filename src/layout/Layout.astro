@@ -1,7 +1,13 @@
 ---
 import { ClientRouter } from "astro:transitions"
 import { Moon, Sun } from "lucide-astro"
-const { title } = Astro.props
+import type { Path } from "~/components/Nav.astro"
+import Nav from "~/components/Nav.astro"
+type Props = {
+  title: string
+  path?: Path
+}
+const { title, path } = Astro.props
 ---
 
 <html lang="ko" class="font-sans tracking-tighter" transition:animate="fade">
@@ -35,8 +41,9 @@ const { title } = Astro.props
           >
         </div>
       </nav>
+      {path && <Nav path={path} />}
       <h1 class="my-16 text-5xl text-center font-black">
-        <slot name="header-title"/>
+        <slot name="header-title" />
       </h1>
     </header>
     <slot />

@@ -1,12 +1,14 @@
 ---
+import type { Path } from "~/components/Nav.astro"
 import WinnerCard from "~/components/WinnerCard.astro"
 import Layout from "~/layout/Layout.astro"
 import { getSortedContests } from "~/lib/getSortedContests"
 
 const contests = await getSortedContests()
+const path = ["홈 (명예의 전당)"] satisfies Path
 ---
 
-<Layout title="월간 향유회 - 명예의 전당">
+<Layout title="월간 향유회 - 명예의 전당" path={path}>
   <span slot="header-title" class="px-4">명예의 전당</span>
   <main
     class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"
