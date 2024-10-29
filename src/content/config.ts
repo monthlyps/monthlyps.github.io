@@ -28,6 +28,7 @@ const contests = defineCollection({
       }),
     ),
     boardType: z.enum(["boj", "spotboard"]),
+    penalty: z.number(),
   }),
 })
 

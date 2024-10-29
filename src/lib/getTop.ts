@@ -1,7 +1,5 @@
 import type { InferEntrySchema } from "astro:content"
 
-const PENALTY = 20
-
 export type TopRecord = {
   name: string
   solve: number
@@ -30,7 +28,7 @@ export function getTop(contest: InferEntrySchema<"contests">) {
         solved.add(run.problem)
         break
       case "INCORRECT":
-        penalties.set(run.who, (penalties.get(run.who) ?? 0) + PENALTY)
+        penalties.set(run.who, (penalties.get(run.who) ?? 0) + contest.penalty)
         break
     }
   }
@@ -47,7 +45,7 @@ export function getTop(contest: InferEntrySchema<"contests">) {
     }
     return b.solve - a.solve
   })
-  let rank = 1
+  let rank = 0
   const prevSolve = 0
   const prevPenalty = 0
   for (const participant of participants) {

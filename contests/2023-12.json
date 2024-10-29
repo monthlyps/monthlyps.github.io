@@ -13739,5 +13739,6 @@
       "submissionMinute": 179
     }
   ],
+  "penalty": 20,
   "boardType": "boj"
 }

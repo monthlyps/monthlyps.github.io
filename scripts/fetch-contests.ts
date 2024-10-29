@@ -16,6 +16,7 @@ type FetchData = {
     result: "ACCEPTED" | "INCORRECT"
     submissionMinute: number
   }[]
+  penalty: number
 }
 
 const BaseContest = z.object({
@@ -92,6 +93,7 @@ const fetchConfig = {
   headers: {
     "User-Agent":
       "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/14.2 Chrome/87.0.4280.141 Mobile Safari/537.36",
+    Cookie: "OnlineJudge=jkjbsdk4vbsh6vgahh2qvd7rjg",
   },
 } satisfies RequestInit
 
@@ -126,7 +128,7 @@ for await (const contestFile of fs.glob(
     )
     continue
   }
-  const spotboard = await fetchSpotoard(bojId)
+  const spotboard = await fetchSpotboard(bojId)
   if (spotboard != null) {
     await fs.writeFile(
       contestFile,
@@ -186,9 +188,10 @@ async function fetchBojBoard(id: string): Promise<FetchData | null> {
       result: result === 1 ? "ACCEPTED" : "INCORRECT",
       submissionMinute: time,
     })),
+    penalty: +contest.penalty,
   }
 }
-async function fetchSpotoard(id: string): Promise<FetchData | null> {
+async function fetchSpotboard(id: string): Promise<FetchData | null> {
   const bojInfoRaw = await fetch(
     `https://www.acmicpc.net/contest/spotboard/${id}/contest.json`,
     fetchConfig,
@@ -231,5 +234,6 @@ async function fetchSpotoard(id: string): Promise<FetchData | null> {
       result: result === "Yes" ? "ACCEPTED" : "INCORRECT",
       submissionMinute: submissionTime,
     })),
+    penalty: 20,
   }
 }
