@@ -21,6 +21,31 @@ const { title, path } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ClientRouter />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.querySelector("[data-toggle-theme]")
+        toggleButton?.addEventListener("click", () => {
+          const isDark = document.documentElement.classList.contains("dark")
+          const newTheme = isDark ? "light" : "dark"
+          localStorage.setItem("theme", newTheme)
+          applyTheme(newTheme)
+        })
+      })
+      document.addEventListener("astro:page-load", () => {
+        applyTheme()
+      })
+      applyTheme()
+      function applyTheme(to?: string) {
+        const localTheme = to ?? localStorage.getItem("theme")
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)")
+          .matches
+          ? "dark"
+          : "light"
+        const theme = localTheme ?? preferredTheme
+        if (theme === "dark") document.documentElement.classList.add("dark")
+        else document.documentElement.classList.remove("dark")
+      }
+    </script>
   </head>
   <body class="dark:bg-dark-9 dark:text-white">
     <header>
@@ -54,27 +79,5 @@ const { title, path } = Astro.props
         &copy; 2024 monthlyps
       </div>
     </footer>
-    <script>
-      document.addEventListener("astro:page-load", () => {
-        applyTheme()
-      })
-      const toggleButton = document.querySelector("[data-toggle-theme]")
-      toggleButton?.addEventListener("click", () => {
-        const isDark = document.documentElement.classList.contains("dark")
-        const newTheme = isDark ? "light" : "dark"
-        localStorage.setItem("theme", newTheme)
-        applyTheme(newTheme)
-      })
-      function applyTheme(to?: string) {
-        const localTheme = to ?? localStorage.getItem("theme")
-        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)")
-          .matches
-          ? "dark"
-          : "light"
-        const theme = localTheme ?? preferredTheme
-        if (theme === "dark") document.documentElement.classList.add("dark")
-        else document.documentElement.classList.remove("dark")
-      }
-    </script>
   </body>
 </html>
