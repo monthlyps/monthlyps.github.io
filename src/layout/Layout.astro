@@ -53,13 +53,13 @@ const { title, path } = Astro.props
         <div
           class="mx-auto lg:max-w-6xl md:max-w-4xl text-5 py-2 px-4 font-bold flex flex-row"
         >
-          <span class="flex-1"
-            ><a
-              class="text-unset decoration-none flex flex-row items-center gap-2"
+          <div class="flex-1">
+            <a
+              class="text-unset decoration-none flex flex-row items-center gap-2 w-fit"
               href="/"><img class="h-5" src="/logo.webp" /> 월간 향유회</a
-            ></span
-          >
-          <button type="button" data-toggle-theme
+            >
+          </div>
+          <button type="button" data-toggle-theme transition:persist
             ><Sun class="dark:hidden" /><Moon
               class="hidden dark:inline"
             /></button
