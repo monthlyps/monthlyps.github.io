@@ -46,11 +46,17 @@ export function getTop(contest: InferEntrySchema<"contests">) {
     return b.solve - a.solve
   })
   let rank = 0
-  const prevSolve = 0
-  const prevPenalty = 0
+  let prevSolve = 0
+  let prevPenalty = 0
   for (const participant of participants) {
-    if (prevSolve !== participant.solve || prevPenalty !== participant.penalty)
+    if (
+      prevSolve !== participant.solve ||
+      prevPenalty !== participant.penalty
+    ) {
       rank++
+      prevSolve = participant.solve
+      prevPenalty = participant.penalty
+    }
     participant.rank = rank
   }
   return participants
