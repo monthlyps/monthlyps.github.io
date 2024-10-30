@@ -15,7 +15,7 @@ type Props = {
 const { path } = Astro.props
 ---
 
-<nav class="b-b b-solid b-light-9 dark:b-dark-3">
+<nav class="b-b b-solid b-border">
   <div
     class="mx-auto lg:max-w-6xl md:max-w-4xl py-2 px-4 flex flex-row justify-start gap-1 text-gray-4"
   >
@@ -28,7 +28,7 @@ const { path } = Astro.props
           return <a href={component.url}>{component.name}</a>
         })
         .flatMap((element, index) =>
-          index === 0 ? element : [<ChevronRight />, element]
+          index === 0 ? element : [<ChevronRight />, element],
         )
     }
   </div>

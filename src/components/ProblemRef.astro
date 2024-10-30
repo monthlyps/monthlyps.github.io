@@ -10,12 +10,14 @@ type Props = {
 
 const { contestId, problemIndex, problemNumber, problemTitle } = Astro.props
 ---
+
 <tr>
   <td>{problemNumber}</td>
   <td class="hover">
-    <a href={`https://www.acmicpc.net/contest/problem/${contestId}/${problemIndex}`} target="_blank"
-      ><LaTeX>{problemTitle}</LaTeX></a
+    <a
+      href={`https://www.acmicpc.net/contest/problem/${contestId}/${problemIndex}`}
+      target="_blank"><LaTeX>{problemTitle}</LaTeX></a
     >
   </td>
-  <td />
+  <td></td>
 </tr>

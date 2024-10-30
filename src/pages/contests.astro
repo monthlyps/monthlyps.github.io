@@ -29,7 +29,11 @@ const path = [
           </tr>
         </thead>
         <tbody>
-          {contests.map(({ id, data }) => <ContestRef id={id} contest={data} />)}
+          {
+            contests.map(({ id, data }) => (
+              <ContestRef id={id} contest={data} />
+            ))
+          }
         </tbody>
       </table>
     </div>

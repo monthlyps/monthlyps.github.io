@@ -11,7 +11,7 @@ const path = ["홈 (명예의 전당)"] satisfies Path
 <Layout title="명예의 전당" path={path}>
   <span slot="header-title" class="px-4">명예의 전당</span>
   <main
-    class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"
+    class="w-full my-4 lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4"
   >
     {contests.map(({ id, data }) => <WinnerCard id={id} contest={data} />)}
   </main>

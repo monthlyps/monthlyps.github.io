@@ -39,15 +39,18 @@ const top = getTop(contest)
 
 <Layout title=`${contest.title}` path={path}>
   <span slot="header-title" class="px-4">{contest.title}</span>
-  <main class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl px-4 flex flex-col gap-4">
+  <main class="w-full my-4 lg:max-w-6xl md:max-w-4xl px-4 flex flex-col gap-4">
     <div
       class="flex flex-row gap-2 text-gray-4 [&_span]:flex [&_span]:flex-row [&_span]:gap-2"
     >
       <span><Calendar /> {contest.date}</span>
       <span><Clock /> {(contest.durationSeconds / 60) | 0}분</span>
       <span><CircleX /> {contest.penalty}분</span>
-      <a href={`https://www.acmicpc.net/contest/view/${contest.bojId}`} target="_blank" rel="noopener noreferrer"><span
-        ><ExternalLink /> BOJ 링크</span></a>
+      <a
+        href={`https://www.acmicpc.net/contest/view/${contest.bojId}`}
+        target="_blank"
+        rel="noopener noreferrer"><span><ExternalLink /> BOJ 링크</span></a
+      >
     </div>
     <h2 class="text-xl font-bold">문제</h2>
     <table class="theme-table">
