@@ -1,0 +1,21 @@
+---
+import LaTeX from "~/components/LaTeX.astro"
+
+type Props = {
+  contestId: string
+  problemIndex: number
+  problemNumber: string
+  problemTitle: string
+}
+
+const { contestId, problemIndex, problemNumber, problemTitle } = Astro.props
+---
+<tr>
+  <td>{problemNumber}</td>
+  <td class="hover">
+    <a href={`https://www.acmicpc.net/contest/problem/${contestId}/${problemIndex}`} target="_blank"
+      ><LaTeX>{problemTitle}</LaTeX></a
+    >
+  </td>
+  <td />
+</tr>
