@@ -58,17 +58,19 @@ const top = getTop(contest)
         <tr>
           <td>번호</td>
           <td>제목</td>
+          <td>출제자</td>
           <td>풀이</td>
         </tr>
       </thead>
       <tbody>
         {
-          contest.problems.map(({ number, title }, index) => (
+          contest.problems.map(({ number, title, author }, index) => (
             <ProblemRef
               contestId={contest.bojId}
               problemIndex={index + 1}
               problemNumber={number}
               problemTitle={title}
+              problemAuthor={author}
             />
           ))
         }

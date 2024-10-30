@@ -6,9 +6,11 @@ type Props = {
   problemIndex: number
   problemNumber: string
   problemTitle: string
+  problemAuthor?: string
 }
 
-const { contestId, problemIndex, problemNumber, problemTitle } = Astro.props
+const { contestId, problemIndex, problemNumber, problemTitle, problemAuthor } =
+  Astro.props
 ---
 
 <tr>
@@ -19,5 +21,6 @@ const { contestId, problemIndex, problemNumber, problemTitle } = Astro.props
       target="_blank"><LaTeX>{problemTitle}</LaTeX></a
     >
   </td>
+  <td>{problemAuthor}</td>
   <td></td>
 </tr>

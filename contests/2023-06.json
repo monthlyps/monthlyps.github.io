@@ -113,23 +113,28 @@
   "problems": [
     {
       "title": "이브, 프시케 그리고 푸른 MEX의 아내",
-      "number": "A"
+      "number": "A",
+      "author": "rustiebeats"
     },
     {
       "title": "나도리합",
-      "number": "B"
+      "number": "B",
+      "author": "swoon"
     },
     {
       "title": "리프 수열",
-      "number": "C"
+      "number": "C",
+      "author": "bnb2011"
     },
     {
       "title": "그 정수의 개수를 구해줘",
-      "number": "D"
+      "number": "D",
+      "author": "snrnsidy"
     },
     {
       "title": "트리와 깃발",
-      "number": "E"
+      "number": "E",
+      "author": "jthis"
     }
   ],
   "runs": [

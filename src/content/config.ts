@@ -17,6 +17,7 @@ const contests = defineCollection({
       z.object({
         title: z.string(),
         number: z.string(),
+        author: z.string().optional(),
       }),
     ),
     runs: z.array(
