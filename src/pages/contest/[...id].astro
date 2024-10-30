@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
 import { Calendar, CircleX, Clock } from "lucide-astro"
+import LaTeX from "~/components/LaTeX.astro"
 import type { Path } from "~/components/Nav.astro"
 import UserRef from "~/components/UserRef.astro"
 import Layout from "~/layout/Layout.astro"
@@ -57,7 +58,9 @@ const top = getTop(contest)
           contest.problems.map(({ number, title }) => (
             <tr>
               <td>{number}</td>
-              <td>{title}</td>
+              <td>
+                <LaTeX>{title}</LaTeX>
+              </td>
               <td />
             </tr>
           ))
