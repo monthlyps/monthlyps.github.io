@@ -49,6 +49,7 @@ const path = [
   </main>
 </Layout>
 <script>
+  import { navigate } from "astro:transitions/client"
   import Fuse from "fuse.js"
   const hit = document.getElementById("hit")!
   const hidden = document.getElementById("hidden")!
@@ -56,20 +57,19 @@ const path = [
   hidden.replaceChildren()
   const fuse = new Fuse(
     participants.map((element) => (element as HTMLElement).innerText),
-    {}
+    {},
   )
-  const search = document.getElementsByTagName("input")[0]
-  const searchParams = new URLSearchParams(location.search)
+  const search = document.getElementsByTagName("input")[0] as HTMLInputElement
+  const searchParams = new URLSearchParams(location.hash.slice(1))
   const q = searchParams.get("q")
-  if (q != null) query(q)
+  if (q != null) {
+    search.value = q
+    query(q)
+  }
   search.addEventListener("input", (e) => {
     const q = (e.currentTarget as HTMLInputElement).value
     searchParams.set("q", q)
-    window.history.replaceState(
-      null,
-      "",
-      `${location.pathname}?${searchParams.toString()}`
-    )
+    navigate(`#${searchParams.toString()}`)
     query(q)
   })
   function query(text: string) {

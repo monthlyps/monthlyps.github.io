@@ -3,7 +3,7 @@ import "katex/dist/katex.css"
 import rehypeParse from "rehype-parse"
 import rehypeStringify from "rehype-stringify"
 import { unified } from "unified"
-import { rehypeKatex } from '~/lib/rehypeKatex'
+import { rehypeKatex } from "~/lib/rehypeKatex"
 
 const slot = await Astro.slots.render("default")
 const math = await unified()

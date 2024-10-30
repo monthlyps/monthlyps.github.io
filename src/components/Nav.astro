@@ -28,7 +28,7 @@ const { path } = Astro.props
           return <a href={component.url}>{component.name}</a>
         })
         .flatMap((element, index) =>
-          index === 0 ? element : [<ChevronRight />, element]
+          index === 0 ? element : [<ChevronRight />, element],
         )
     }
   </div>

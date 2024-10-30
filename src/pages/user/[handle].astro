@@ -11,7 +11,7 @@ export const getStaticPaths = (async () => {
   return [...new Set(collection.flatMap(({ data }) => data.participants))].map(
     (handle) => ({
       params: { handle },
-    })
+    }),
   )
 }) satisfies GetStaticPaths
 
