@@ -6,6 +6,7 @@ import type { Path } from "~/components/Nav.astro"
 import UserRef from "~/components/UserRef.astro"
 import Layout from "~/layout/Layout.astro"
 import { getTop } from "~/lib/getTop"
+import "katex/dist/katex.css"
 
 export const getStaticPaths = (async () => {
   const collection = await getCollection("contests")
@@ -114,3 +115,16 @@ const top = getTop(contest)
     </div>
   </main>
 </Layout>
+
+<script>
+  import renderMathInElement from "katex/contrib/auto-render"
+  renderMathInElement(document.documentElement, {
+    delimiters: [
+      { left: "$$", right: "$$", display: true },
+      { left: "$", right: "$", display: false },
+      { left: "\\(", right: "\\)", display: false },
+      { left: "\\[", right: "\\]", display: true },
+    ],
+    throwOnError: false,
+  })
+</script>
