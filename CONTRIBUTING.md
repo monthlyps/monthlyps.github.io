@@ -14,5 +14,6 @@
 이후 다음 명령어로 대회 정보를 불러옵니다.
 
 ```shell
-pnpm fetch-contests
+# Fetch contest information of 2024-04
+pnpm fetch-single-contest 2024-04.json
 ```
