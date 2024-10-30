@@ -58,7 +58,7 @@ const top = getTop(contest)
           contest.problems.map(({ number, title }) => (
             <tr>
               <td>{number}</td>
-              <td>{title}</td>
+              <td class="math">{title}</td>
               <td />
             </tr>
           ))
@@ -118,7 +118,7 @@ const top = getTop(contest)
 
 <script>
   import renderMathInElement from "katex/contrib/auto-render"
-  renderMathInElement(document.documentElement, {
+  const config = {
     delimiters: [
       { left: "$$", right: "$$", display: true },
       { left: "$", right: "$", display: false },
@@ -126,5 +126,8 @@ const top = getTop(contest)
       { left: "\\[", right: "\\]", display: true },
     ],
     throwOnError: false,
-  })
+  }
+  for (const element of document.getElementsByClassName("math")) {
+    renderMathInElement(element as HTMLElement, config)
+  }
 </script>
