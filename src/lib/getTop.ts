@@ -55,7 +55,7 @@ export function getTop(contest: InferEntrySchema<"contests">) {
   }
   const participants = [...records.values()]
   participants.sort((a, b) => {
-    if (a.solve === b.solve) {
+    if (a.acceptedCount === b.acceptedCount) {
       if (a.totalPenalty === b.totalPenalty) return a.name.localeCompare(b.name)
       return a.totalPenalty - b.totalPenalty
     }
