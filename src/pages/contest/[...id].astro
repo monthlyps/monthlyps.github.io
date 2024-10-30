@@ -2,11 +2,11 @@
 import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
 import { Calendar, CircleX, Clock } from "lucide-astro"
+import LaTeX from "~/components/LaTeX.astro"
 import type { Path } from "~/components/Nav.astro"
 import UserRef from "~/components/UserRef.astro"
 import Layout from "~/layout/Layout.astro"
 import { getTop } from "~/lib/getTop"
-import "katex/dist/katex.css"
 
 export const getStaticPaths = (async () => {
   const collection = await getCollection("contests")
@@ -58,7 +58,9 @@ const top = getTop(contest)
           contest.problems.map(({ number, title }) => (
             <tr>
               <td>{number}</td>
-              <td class="math">{title}</td>
+              <td>
+                <LaTeX>{title}</LaTeX>
+              </td>
               <td />
             </tr>
           ))
@@ -115,19 +117,3 @@ const top = getTop(contest)
     </div>
   </main>
 </Layout>
-
-<script>
-  import renderMathInElement from "katex/contrib/auto-render"
-  const config = {
-    delimiters: [
-      { left: "$$", right: "$$", display: true },
-      { left: "$", right: "$", display: false },
-      { left: "\\(", right: "\\)", display: false },
-      { left: "\\[", right: "\\]", display: true },
-    ],
-    throwOnError: false,
-  }
-  for (const element of document.getElementsByClassName("math")) {
-    renderMathInElement(element as HTMLElement, config)
-  }
-</script>
