@@ -47,19 +47,21 @@ const { title, path } = Astro.props
       }
     </script>
   </head>
-  <body class="dark:bg-dark-9 dark:text-white">
-    <header>
-      <nav class="b-b b-solid b-light-9 dark:b-dark-3">
+  <body
+    class="dark:bg-dark-9 dark:text-white min-h-dvh flex flex-col items-center"
+  >
+    <header class="w-full">
+      <nav class="b-b b-solid b-border" transition:persist>
         <div
-          class="mx-auto lg:max-w-6xl md:max-w-4xl text-5 py-2 px-4 font-bold flex flex-row"
+          class="mx-auto lg:max-w-6xl md:max-w-4xl py-2 px-4 flex flex-row items-center gap-4"
         >
-          <div class="flex-1">
-            <a
-              class="text-unset decoration-none flex flex-row items-center gap-2 w-fit"
-              href="/"><img class="h-5" src="/logo.webp" /> 월간 향유회</a
-            >
-          </div>
-          <button type="button" data-toggle-theme transition:persist
+          <a
+            class="hover text-5 font-bold text-unset decoration-none flex flex-row items-center gap-2 w-fit"
+            href="/"><img class="h-5" src="/logo.webp" /> 월간 향유회</a
+          >
+          <a class="hover" href="/user">참가자 검색</a>
+          <div class="flex-1"></div>
+          <button class="hover" type="button" data-toggle-theme transition:persist
             ><Sun class="dark:hidden" /><Moon
               class="hidden dark:inline"
             /></button
@@ -74,7 +76,8 @@ const { title, path } = Astro.props
       </h1>
     </header>
     <slot />
-    <footer class="b-t b-solid b-light-9 dark:b-dark-3">
+    <div class="flex-1"></div>
+    <footer class="w-full b-t b-solid b-border" transition:persist>
       <div
         class="mx-auto lg:max-w-6xl md:max-w-4xl text-sm py-4 px-4 text-gray-4"
       >
