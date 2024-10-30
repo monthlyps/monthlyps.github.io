@@ -46,8 +46,11 @@ const top = getTop(contest)
       <span><Calendar /> {contest.date}</span>
       <span><Clock /> {(contest.durationSeconds / 60) | 0}분</span>
       <span><CircleX /> {contest.penalty}분</span>
-      <a href={`https://www.acmicpc.net/contest/view/${contest.bojId}`} target="_blank" rel="noopener noreferrer"><span
-        ><ExternalLink /> BOJ 링크</span></a>
+      <a
+        href={`https://www.acmicpc.net/contest/view/${contest.bojId}`}
+        target="_blank"
+        rel="noopener noreferrer"><span><ExternalLink /> BOJ 링크</span></a
+      >
     </div>
     <h2 class="text-xl font-bold">문제</h2>
     <table class="theme-table">
