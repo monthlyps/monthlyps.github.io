@@ -1,0 +1,37 @@
+---
+import type { Path } from "~/components/Nav.astro"
+import ContestRef from "~/components/ContestRef.astro"
+import Layout from "~/layout/Layout.astro"
+import { getSortedContests } from "~/lib/getSortedContests"
+
+const contests = await getSortedContests()
+const path = [
+  {
+    name: "홈",
+    url: "/",
+  },
+  {
+    name: "대회",
+    url: "/contests",
+  },
+] satisfies Path
+---
+
+<Layout title="지난 대회 목록" path={path}>
+  <span slot="header-title" class="px-4">지난 대회 목록</span>
+  <main class="mx-auto my-4 lg:max-w-6xl md:max-w-4xl px-4 flex flex-col gap-4">
+    <div class="w-full overflow-x-auto">
+      <table class="theme-table">
+        <thead>
+          <tr>
+            <td class="min-w-12">날짜</td>
+            <td>대회 이름</td>
+          </tr>
+        </thead>
+        <tbody>
+          {contests.map(({ id, data }) => <ContestRef id={id} contest={data} />)}
+        </tbody>
+      </table>
+    </div>
+  </main>
+</Layout>

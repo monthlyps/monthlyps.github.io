@@ -1,7 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
-import { Calendar, CircleX, Clock } from "lucide-astro"
+import { Calendar, CircleX, Clock, ExternalLink } from "lucide-astro"
 import LaTeX from "~/components/LaTeX.astro"
 import type { Path } from "~/components/Nav.astro"
 import UserRef from "~/components/UserRef.astro"
@@ -24,7 +24,10 @@ const path = [
     name: "홈",
     url: "/",
   },
-  "대회",
+  {
+    name: "대회",
+    url: "/contests",
+  },
   {
     name: contest.title,
     url: Astro.url.pathname,
@@ -43,6 +46,8 @@ const top = getTop(contest)
       <span><Calendar /> {contest.date}</span>
       <span><Clock /> {(contest.durationSeconds / 60) | 0}분</span>
       <span><CircleX /> {contest.penalty}분</span>
+      <a href={`https://www.acmicpc.net/contest/view/${contest.bojId}`} target="_blank" rel="noopener noreferrer"><span
+        ><ExternalLink /> BOJ 링크</span></a>
     </div>
     <h2 class="text-xl font-bold">문제</h2>
     <table class="theme-table">

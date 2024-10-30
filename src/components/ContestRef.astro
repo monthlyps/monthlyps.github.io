@@ -1,0 +1,21 @@
+---
+import type { InferEntrySchema } from "astro:content"
+
+type Props = {
+  id: string
+  contest: InferEntrySchema<"contests">
+}
+
+const { id, contest } = Astro.props
+const slug = id.replace("-", "/").replace("-", "/")
+---
+<div class="w-full overflow-x-auto">
+  <tr>
+    <td>{contest.date}</td>
+    <td class="hover">
+      <a href={`/contest/${slug}`}
+        >{contest.title}</a
+      >
+    </td>
+  </tr>
+</div>
