@@ -1,4 +1,5 @@
 import { z } from "astro/zod"
+import { cac } from "cac"
 import * as fs from "node:fs/promises"
 import * as path from "node:path"
 
@@ -96,57 +97,6 @@ const fetchConfig = {
   },
 } satisfies RequestInit
 
-const projectRoot = path.resolve(import.meta.dirname, "..")
-for await (const contestFile of fs.glob(
-  path.join(projectRoot, "contests/*.json"),
-)) {
-  const contestJson = await fs.readFile(contestFile, { encoding: "utf-8" })
-  const object = JSON.parse(contestJson)
-  const baseContestParse = BaseContest.safeParse(object)
-  if (baseContestParse.error != null) {
-    console.error(`invalid schema \`${contestFile}\``, baseContestParse.error)
-    continue
-  }
-  const {
-    data: { bojId, ...data },
-  } = baseContestParse
-  const bojBoard = await fetchBojBoard(bojId)
-  if (bojBoard != null) {
-    await fs.writeFile(
-      contestFile,
-      JSON.stringify(
-        {
-          ...data,
-          bojId,
-          ...bojBoard,
-          boardType: "boj",
-        },
-        null,
-        2,
-      ),
-    )
-    continue
-  }
-  const spotboard = await fetchSpotboard(bojId)
-  if (spotboard != null) {
-    await fs.writeFile(
-      contestFile,
-      JSON.stringify(
-        {
-          ...data,
-          bojId,
-          ...spotboard,
-          boardType: "spotboard",
-        },
-        null,
-        2,
-      ),
-    )
-    continue
-  }
-  console.error(`could not fetch contest \`${contestFile}\``)
-}
-
 async function fetchBojBoard(id: string): Promise<FetchData | null> {
   const bojInfoRaw = await fetch(
     `https://www.acmicpc.net/contest/board/${id}/info.json`,
@@ -190,6 +140,7 @@ async function fetchBojBoard(id: string): Promise<FetchData | null> {
     penalty: +contest.penalty,
   }
 }
+
 async function fetchSpotboard(id: string): Promise<FetchData | null> {
   const spotboardInfoRaw = await fetch(
     `https://www.acmicpc.net/contest/spotboard/${id}/contest.json`,
@@ -244,3 +195,91 @@ async function fetchSpotboard(id: string): Promise<FetchData | null> {
     penalty: 20,
   }
 }
+
+async function processContestFile(contestFile: string): Promise<void> {
+  console.log(`Fetching contest: ${contestFile}`)
+  const contestJson = await fs.readFile(contestFile, { encoding: "utf-8" })
+  const object = JSON.parse(contestJson)
+  const baseContestParse = BaseContest.safeParse(object)
+  if (baseContestParse.error != null) {
+    console.error(`invalid schema \`${contestFile}\``, baseContestParse.error)
+    return
+  }
+  const {
+    data: { bojId, ...data },
+  } = baseContestParse
+  const bojBoard = await fetchBojBoard(bojId)
+  if (bojBoard != null) {
+    await fs.writeFile(
+      contestFile,
+      JSON.stringify(
+        {
+          ...data,
+          bojId,
+          ...bojBoard,
+          boardType: "boj",
+        },
+        null,
+        2,
+      ),
+    )
+    return
+  }
+  const spotboard = await fetchSpotboard(bojId)
+  if (spotboard != null) {
+    await fs.writeFile(
+      contestFile,
+      JSON.stringify(
+        {
+          ...data,
+          bojId,
+          ...spotboard,
+          boardType: "spotboard",
+        },
+        null,
+        2,
+      ),
+    )
+    return
+  }
+  console.error(`could not fetch contest \`${contestFile}\``)
+}
+
+const cli = cac("contest-fetcher")
+cli
+  .command("", "Fetch contest data")
+  .option(
+    "--mode <type>",
+    'Specify "single" to fetch one contest or "all" to fetch all contests',
+  )
+  .option("--name <contestName>", 'Specify contest name if mode is "single"', {
+    default: "",
+  })
+  .action(async (options: { mode: "single" | "all"; name: string }) => {
+    const { mode, name } = options
+
+    if (mode === "all") {
+      const projectRoot = path.resolve(import.meta.dirname, "..")
+      for await (const contestFile of fs.glob(
+        path.join(projectRoot, "contests/*.json"),
+      )) {
+        processContestFile(contestFile)
+      }
+    } else if (mode === "single") {
+      if (!name) {
+        console.error(
+          'Please specify a contest name with --name when mode is "single"',
+        )
+        process.exit(1)
+      }
+      const projectRoot = path.resolve(import.meta.dirname, "..")
+      const contestFile = path.join(projectRoot, `contests/${name}`)
+      processContestFile(contestFile)
+    } else {
+      console.error('Invalid mode. Use "single" or "all"')
+      process.exit(1)
+    }
+  })
+
+// Parse CLI arguments
+cli.parse()
