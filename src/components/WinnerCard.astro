@@ -1,12 +1,12 @@
 ---
-import type { InferEntrySchema } from "astro:content"
+import type { Contest } from "~/lib/getContests"
 import { getTagValue } from "~/lib/getTagValue"
 import { getTop } from "~/lib/getTop"
 import UserRef from "./UserRef.astro"
 
 type Props = {
   id: string
-  contest: InferEntrySchema<"contests">
+  contest: Contest
 }
 
 const { id, contest } = Astro.props

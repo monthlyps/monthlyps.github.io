@@ -20,10 +20,11 @@ type FetchData = {
   penalty: number
 }
 
-const BaseContest = z.object({
-  date: z.string(),
-  bojId: z.string(),
-})
+const Metadata = z.record(
+  z.object({
+    bojId: z.string(),
+  }),
+)
 
 const BojBoardInfo = z.object({
   start: z.number(),
@@ -196,53 +197,21 @@ async function fetchSpotboard(id: string): Promise<FetchData | null> {
   }
 }
 
-async function processContestFile(contestFile: string): Promise<void> {
-  console.log(`Fetching contest: ${contestFile}`)
-  const contestJson = await fs.readFile(contestFile, { encoding: "utf-8" })
-  const object = JSON.parse(contestJson)
-  const baseContestParse = BaseContest.safeParse(object)
-  if (baseContestParse.error != null) {
-    console.error(`invalid schema \`${contestFile}\``, baseContestParse.error)
-    return
-  }
-  const {
-    data: { bojId, ...data },
-  } = baseContestParse
+async function processContestFile(
+  outFile: string,
+  bojId: string,
+): Promise<void> {
   const bojBoard = await fetchBojBoard(bojId)
   if (bojBoard != null) {
-    await fs.writeFile(
-      contestFile,
-      JSON.stringify(
-        {
-          ...data,
-          bojId,
-          ...bojBoard,
-          boardType: "boj",
-        },
-        null,
-        2,
-      ),
-    )
+    await fs.writeFile(outFile, JSON.stringify(bojBoard, null, 2))
     return
   }
   const spotboard = await fetchSpotboard(bojId)
   if (spotboard != null) {
-    await fs.writeFile(
-      contestFile,
-      JSON.stringify(
-        {
-          ...data,
-          bojId,
-          ...spotboard,
-          boardType: "spotboard",
-        },
-        null,
-        2,
-      ),
-    )
+    await fs.writeFile(outFile, JSON.stringify(spotboard, null, 2))
     return
   }
-  console.error(`could not fetch contest \`${contestFile}\``)
+  console.error(`could not fetch contest \`${outFile}\``)
 }
 
 const cli = cac("contest-fetcher")
@@ -258,23 +227,31 @@ cli
   .action(async (options: { mode: "single" | "all"; name: string }) => {
     const { mode, name } = options
 
+    const contestsDir = path.resolve(import.meta.dirname, "..", "contests")
+    const metadata = Metadata.parse(
+      JSON.stringify(
+        await fs.readFile(path.join(contestsDir, "metadata.json"), {
+          encoding: "utf-8",
+        }),
+      ),
+    )
+
     if (mode === "all") {
-      const projectRoot = path.resolve(import.meta.dirname, "..")
-      for await (const contestFile of fs.glob(
-        path.join(projectRoot, "contests/*.json"),
-      )) {
-        processContestFile(contestFile)
+      for await (const [id, { bojId }] of Object.entries(metadata)) {
+        await processContestFile(id, bojId)
       }
     } else if (mode === "single") {
-      if (!name) {
+      if (name == null) {
         console.error(
           'Please specify a contest name with --name when mode is "single"',
         )
         process.exit(1)
       }
-      const projectRoot = path.resolve(import.meta.dirname, "..")
-      const contestFile = path.join(projectRoot, `contests/${name}`)
-      processContestFile(contestFile)
+      if (!(name in metadata)) {
+        console.error(`Invalid metadata for ${name}`)
+        process.exit(1)
+      }
+      await processContestFile(name, metadata[name].bojId)
     } else {
       console.error('Invalid mode. Use "single" or "all"')
       process.exit(1)

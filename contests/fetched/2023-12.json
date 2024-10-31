@@ -1,6 +1,4 @@
 {
-  "date": "2023-12-24",
-  "bojId": "1219",
   "title": "월간 향유회 2023. 12. · Arena #15",
   "durationSeconds": 10800,
   "participants": [
@@ -13739,6 +13737,5 @@
       "submissionMinute": 179
     }
   ],
-  "penalty": 20,
-  "boardType": "boj"
+  "penalty": 20
 }

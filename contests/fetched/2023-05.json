@@ -1,6 +1,4 @@
 {
-  "date": "2023-05-28",
-  "bojId": "1004",
   "title": "월간 향유회 2023. 05.",
   "durationSeconds": 7200,
   "participants": [
@@ -3916,6 +3914,5 @@
       "submissionMinute": 119
     }
   ],
-  "penalty": 20,
-  "boardType": "boj"
+  "penalty": 20
 }

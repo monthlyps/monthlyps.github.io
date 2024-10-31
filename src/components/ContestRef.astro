@@ -1,9 +1,9 @@
 ---
-import type { InferEntrySchema } from "astro:content"
+import type { Contest } from "~/lib/getContests"
 
 type Props = {
   id: string
-  contest: InferEntrySchema<"contests">
+  contest: Contest
 }
 
 const { id, contest } = Astro.props

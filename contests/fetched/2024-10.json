@@ -1,6 +1,4 @@
 {
-  "date": "2024-10-27",
-  "bojId": "1384",
   "title": "월간 향유회 2024. 10.",
   "durationSeconds": 7200,
   "participants": [
@@ -2357,6 +2355,5 @@
       "submissionMinute": 119
     }
   ],
-  "penalty": 20,
-  "boardType": "boj"
+  "penalty": 20
 }

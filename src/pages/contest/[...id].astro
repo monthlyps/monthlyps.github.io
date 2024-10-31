@@ -3,10 +3,10 @@ import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
 import { Calendar, CircleX, Clock, ExternalLink } from "lucide-astro"
 import type { Path } from "~/components/Nav.astro"
-import UserRef from "~/components/UserRef.astro"
 import ProblemRef from "~/components/ProblemRef.astro"
+import UserRef from "~/components/UserRef.astro"
 import Layout from "~/layout/Layout.astro"
-import { getContestsWithAuthors } from "~/lib/getContests"
+import { getContests } from "~/lib/getContests"
 import { getTop } from "~/lib/getTop"
 
 export const getStaticPaths = (async () => {
@@ -16,7 +16,7 @@ export const getStaticPaths = (async () => {
   }))
 }) satisfies GetStaticPaths
 
-const collection = await getContestsWithAuthors()
+const collection = await getContests()
 const { id } = Astro.params
 const actualId = id.replaceAll("/", "-")
 const { data: contest } = collection.find(({ id }) => id === actualId)!
@@ -36,6 +36,11 @@ const path = [
 ] satisfies Path
 
 const top = getTop(contest)
+
+const problems = contest.problems.map((problem, index) => ({
+  ...problem,
+  author: contest.authors?.[index],
+}))
 ---
 
 <Layout title=`${contest.title}` path={path}>
@@ -54,18 +59,18 @@ const top = getTop(contest)
       >
     </div>
     <h2 class="text-xl font-bold">문제</h2>
-    <table class="theme-table">
+    <table class="theme-table break-words">
       <thead>
         <tr>
-          <td>번호</td>
+          <td class="min-w-12">번호</td>
           <td>제목</td>
           <td>출제자</td>
-          <td>풀이</td>
+          <td class="min-w-12">풀이</td>
         </tr>
       </thead>
       <tbody>
         {
-          contest.problems.map(({ number, title, author }, index) => (
+          problems.map(({ number, title, author }, index) => (
             <ProblemRef
               contestId={contest.bojId}
               problemIndex={index + 1}

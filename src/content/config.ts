@@ -1,14 +1,12 @@
+import { file, glob } from "astro/loaders"
 import { defineCollection, z } from "astro:content"
-import { glob } from "astro/loaders"
 
 const contests = defineCollection({
   loader: glob({
     pattern: "*.json",
-    base: "./contests",
+    base: "./contests/fetched",
   }),
   schema: z.object({
-    date: z.string(),
-    bojId: z.string(),
     title: z.string(),
     durationSeconds: z.number(),
     participants: z.array(z.string()),
@@ -16,7 +14,6 @@ const contests = defineCollection({
       z.object({
         title: z.string(),
         number: z.string(),
-        author: z.string().optional(),
       }),
     ),
     runs: z.array(
@@ -27,17 +24,17 @@ const contests = defineCollection({
         submissionMinute: z.number(),
       }),
     ),
-    boardType: z.enum(["boj", "spotboard"]),
     penalty: z.number(),
   }),
 })
 
-const authors = defineCollection({
-  loader: glob({
-    pattern: "*.json",
-    base: "./authors",
+const contestsMetadata = defineCollection({
+  loader: file("./contests/metadata.json"),
+  schema: z.object({
+    date: z.string(),
+    bojId: z.string(),
+    authors: z.array(z.string()).optional(),
   }),
-  schema: z.array(z.string()),
 })
 
-export const collections = { contests, authors }
+export const collections = { contests, contestsMetadata }
