@@ -1,6 +1,4 @@
 {
-  "date": "2024-02-25",
-  "bojId": "1249",
   "title": "월간 향유회 2024. 02. -겨울 운동회 편-",
   "durationSeconds": 7200,
   "participants": [
@@ -1538,6 +1536,5 @@
       "submissionMinute": 119
     }
   ],
-  "penalty": 20,
-  "boardType": "boj"
+  "penalty": 20
 }

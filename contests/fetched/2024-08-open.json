@@ -1,6 +1,4 @@
 {
-  "date": "2024-09-01",
-  "bojId": "1338",
   "title": "월간 향유회 2024. 08. Open Contest",
   "durationSeconds": 10800,
   "participants": [
@@ -4731,6 +4729,5 @@
       "submissionMinute": 179
     }
   ],
-  "penalty": 20,
-  "boardType": "boj"
+  "penalty": 20
 }

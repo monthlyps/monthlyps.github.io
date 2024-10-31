@@ -3,7 +3,7 @@ import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
 import type { Path } from "~/components/Nav.astro"
 import Layout from "~/layout/Layout.astro"
-import { getSortedContests } from "~/lib/getSortedContests"
+import { getSortedContests } from "~/lib/getContests"
 import { getTop } from "~/lib/getTop"
 
 export const getStaticPaths = (async () => {
