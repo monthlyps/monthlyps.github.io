@@ -2,7 +2,7 @@
 import type { Path } from "~/components/Nav.astro"
 import ContestRef from "~/components/ContestRef.astro"
 import Layout from "~/layout/Layout.astro"
-import { getSortedContests } from "~/lib/getSortedContests"
+import { getSortedContests } from "~/lib/getContests"
 
 const contests = await getSortedContests()
 const path = [

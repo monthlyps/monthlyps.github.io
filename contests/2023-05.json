@@ -155,23 +155,19 @@
   "problems": [
     {
       "title": "재밌는 나머지 연산",
-      "number": "A",
-      "author": "pjshwa"
+      "number": "A"
     },
     {
       "title": "평균 구하기",
-      "number": "B",
-      "author": "rustiebeats"
+      "number": "B"
     },
     {
       "title": "빨강~ 빨강~ 파랑! 파랑! 달콤한 솜사탕!",
-      "number": "C",
-      "author": "jthis"
+      "number": "C"
     },
     {
       "title": "Easy Interactive Problem",
-      "number": "D",
-      "author": "bnb2011"
+      "number": "D"
     }
   ],
   "runs": [

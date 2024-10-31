@@ -1,5 +1,4 @@
 import { defineCollection, z } from "astro:content"
-
 import { glob } from "astro/loaders"
 
 const contests = defineCollection({
@@ -33,4 +32,12 @@ const contests = defineCollection({
   }),
 })
 
-export const collections = { contests }
+const authors = defineCollection({
+  loader: glob({
+    pattern: "*.json",
+    base: "./authors",
+  }),
+  schema: z.array(z.string()),
+})
+
+export const collections = { contests, authors }

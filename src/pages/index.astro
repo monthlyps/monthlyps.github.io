@@ -2,7 +2,7 @@
 import type { Path } from "~/components/Nav.astro"
 import WinnerCard from "~/components/WinnerCard.astro"
 import Layout from "~/layout/Layout.astro"
-import { getSortedContests } from "~/lib/getSortedContests"
+import { getSortedContests } from "~/lib/getContests"
 
 const contests = await getSortedContests()
 const path = ["홈 (명예의 전당)"] satisfies Path

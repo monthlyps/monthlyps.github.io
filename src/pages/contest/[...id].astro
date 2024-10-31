@@ -6,6 +6,7 @@ import type { Path } from "~/components/Nav.astro"
 import UserRef from "~/components/UserRef.astro"
 import ProblemRef from "~/components/ProblemRef.astro"
 import Layout from "~/layout/Layout.astro"
+import { getContestsWithAuthors } from "~/lib/getContests"
 import { getTop } from "~/lib/getTop"
 
 export const getStaticPaths = (async () => {
@@ -15,7 +16,7 @@ export const getStaticPaths = (async () => {
   }))
 }) satisfies GetStaticPaths
 
-const collection = await getCollection("contests")
+const collection = await getContestsWithAuthors()
 const { id } = Astro.params
 const actualId = id.replaceAll("/", "-")
 const { data: contest } = collection.find(({ id }) => id === actualId)!
