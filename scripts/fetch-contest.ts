@@ -1,5 +1,7 @@
 import { z } from "astro/zod"
+import { cac } from "cac"
 import * as fs from "node:fs/promises"
+import * as path from "node:path"
 
 type FetchData = {
   durationSeconds: number
@@ -194,7 +196,8 @@ async function fetchSpotboard(id: string): Promise<FetchData | null> {
   }
 }
 
-export async function processContestFile(contestFile: string): Promise<void> {
+async function processContestFile(contestFile: string): Promise<void> {
+  console.log(`Fetching contest: ${contestFile}`)
   const contestJson = await fs.readFile(contestFile, { encoding: "utf-8" })
   const object = JSON.parse(contestJson)
   const baseContestParse = BaseContest.safeParse(object)
@@ -241,3 +244,42 @@ export async function processContestFile(contestFile: string): Promise<void> {
   }
   console.error(`could not fetch contest \`${contestFile}\``)
 }
+
+const cli = cac("contest-fetcher")
+cli
+  .command("", "Fetch contest data")
+  .option(
+    "--mode <type>",
+    'Specify "single" to fetch one contest or "all" to fetch all contests',
+  )
+  .option("--name <contestName>", 'Specify contest name if mode is "single"', {
+    default: "",
+  })
+  .action(async (options: { mode: "single" | "all"; name: string }) => {
+    const { mode, name } = options
+
+    if (mode === "all") {
+      const projectRoot = path.resolve(import.meta.dirname, "..")
+      for await (const contestFile of fs.glob(
+        path.join(projectRoot, "contests/*.json"),
+      )) {
+        processContestFile(contestFile)
+      }
+    } else if (mode === "single") {
+      if (!name) {
+        console.error(
+          'Please specify a contest name with --name when mode is "single"',
+        )
+        process.exit(1)
+      }
+      const projectRoot = path.resolve(import.meta.dirname, "..")
+      const contestFile = path.join(projectRoot, `contests/${name}`)
+      processContestFile(contestFile)
+    } else {
+      console.error('Invalid mode. Use "single" or "all"')
+      process.exit(1)
+    }
+  })
+
+// Parse CLI arguments
+cli.parse()
