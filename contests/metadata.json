@@ -27,17 +27,40 @@
   "2023-10": {
     "date": "2023-10-29",
     "bojId": "1149",
-    "authors": ["nflight11", "pjshwa", "moonlit", "hibye1217", "heeda0528, kiwiyou"]
+    "authors": [
+      "nflight11",
+      "pjshwa",
+      "moonlit",
+      "hibye1217",
+      "heeda0528, kiwiyou"
+    ]
   },
   "2023-11": {
     "date": "2023-11-26",
     "bojId": "1200",
-    "authors": ["rustiebeats", "azberjibiou", "cologne", "bnb2011", "utilforever"]
+    "authors": [
+      "rustiebeats",
+      "azberjibiou",
+      "cologne",
+      "bnb2011",
+      "utilforever"
+    ]
   },
   "2023-12": {
     "date": "2023-12-24",
     "bojId": "1219",
-    "authors": ["kiwiyou", "heeda0528", "utilforever", "moonlit", "heeda0528", "rustiebeats", "heeda0528, pjshwa", "kiwiyou", "snrnsidy", "bnb2011"]
+    "authors": [
+      "kiwiyou",
+      "heeda0528",
+      "utilforever",
+      "moonlit",
+      "heeda0528",
+      "rustiebeats",
+      "heeda0528, pjshwa",
+      "kiwiyou",
+      "snrnsidy",
+      "bnb2011"
+    ]
   },
   "2024-01": {
     "date": "2024-01-28",
@@ -57,12 +80,34 @@
   "2024-08-onsite": {
     "date": "2024-09-01",
     "bojId": "1337",
-    "authors": ["pjshwa", "kiwiyou", "pjshwa", "pjshwa", "kiwiyou, rustiebeats", "bnb2011", "cologne", "ibm2006", "snrnsidy", "cologne"]
+    "authors": [
+      "pjshwa",
+      "kiwiyou",
+      "pjshwa",
+      "pjshwa",
+      "kiwiyou, rustiebeats",
+      "bnb2011",
+      "cologne",
+      "ibm2006",
+      "snrnsidy",
+      "cologne"
+    ]
   },
   "2024-08-open": {
     "date": "2024-09-01",
     "bojId": "1338",
-    "authors": ["pjshwa", "kiwiyou", "pjshwa", "pjshwa", "kiwiyou, rustiebeats", "bnb2011", "cologne", "ibm2006", "snrnsidy", "cologne"]
+    "authors": [
+      "pjshwa",
+      "kiwiyou",
+      "pjshwa",
+      "pjshwa",
+      "kiwiyou, rustiebeats",
+      "bnb2011",
+      "cologne",
+      "ibm2006",
+      "snrnsidy",
+      "cologne"
+    ]
   },
   "2024-09": {
     "date": "2024-09-29",
