@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
 import type { Path } from "~/components/Nav.astro"
 import Layout from "~/layout/Layout.astro"
+import { convertContestIdToSlug } from "~/lib/convertContestIdToSlug"
 import { getSortedContests } from "~/lib/getContests"
 import { getTop } from "~/lib/getTop"
 
@@ -27,7 +28,7 @@ const contestLog = contests.flatMap(({ id, data: contest }) => {
     rank,
     solve,
     penalty,
-    slug: id.replace("-", "/").replace("-", "/"),
+    slug: convertContestIdToSlug(id),
   }
 })
 

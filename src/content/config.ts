@@ -37,4 +37,15 @@ const contestsMetadata = defineCollection({
   }),
 })
 
-export const collections = { contests, contestsMetadata }
+const editorials = defineCollection({
+  loader: glob({
+    pattern: "*.md",
+    base: "./editorials",
+  }),
+  schema: z.object({
+    contest: z.string(),
+    index: z.number(),
+  }),
+})
+
+export const collections = { contests, contestsMetadata, editorials }

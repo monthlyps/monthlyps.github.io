@@ -1,4 +1,5 @@
 ---
+import { convertContestIdToSlug } from "~/lib/convertContestIdToSlug"
 import type { Contest } from "~/lib/getContests"
 
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
 }
 
 const { id, contest } = Astro.props
-const slug = id.replace("-", "/").replace("-", "/")
+const slug = convertContestIdToSlug(id)
 ---
 
 <div class="w-full overflow-x-auto">

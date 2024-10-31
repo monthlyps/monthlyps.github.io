@@ -1,0 +1,69 @@
+---
+import type { GetStaticPaths } from "astro"
+import { getCollection, render } from "astro:content"
+import "katex/dist/katex.css"
+import { Pencil } from "lucide-astro"
+import type { Path } from "~/components/Nav.astro"
+import Layout from "~/layout/Layout.astro"
+import { convertContestIdToSlug } from "~/lib/convertContestIdToSlug"
+import { getContests } from "~/lib/getContests"
+
+export const getStaticPaths = (async () => {
+  const collection = await getCollection("editorials")
+  return collection.map((entry) => ({
+    params: {
+      slug: `${convertContestIdToSlug(entry.data.contest)}/${entry.data.index}`,
+    },
+    props: {
+      entry,
+    },
+  }))
+}) satisfies GetStaticPaths
+
+const { slug } = Astro.params
+const { entry } = Astro.props
+const [year, month, tag, index] = slug.split("/")
+const id = `${year}-${month}-${tag}`
+const collection = await getContests()
+const { data: contest } = collection.find(
+  ({ id: contestId }) => contestId === id,
+)!
+const { number, title } = contest.problems[+index]
+const path = [
+  {
+    name: "홈",
+    url: "/",
+  },
+  "풀이",
+  {
+    name: title,
+    url: Astro.url.pathname,
+  },
+] satisfies Path
+
+const author = contest.authors?.[+index]
+const { Content } = await render(entry)
+---
+
+<Layout title=`${title}` path={path}>
+  <span slot="header-title" class="px-4">{title}</span>
+  <main class="w-full my-4 lg:max-w-6xl md:max-w-4xl px-4 flex flex-col gap-4">
+    <div class="flex flex-row gap-2 text-gray-4 text-sm ws-nowrap">
+      <span>
+        {contest.title}
+        {number}번
+      </span>
+      {
+        author && (
+          <span class="flex flex-row items-center gap-1">
+            <Pencil class="h-5" />
+            {author}
+          </span>
+        )
+      }
+    </div>
+    <article class="prose [&]:max-w-initial">
+      <Content />
+    </article>
+  </main>
+</Layout>
