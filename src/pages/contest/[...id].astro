@@ -6,20 +6,29 @@ import type { Path } from "~/components/Nav.astro"
 import ProblemRef from "~/components/ProblemRef.astro"
 import UserRef from "~/components/UserRef.astro"
 import Layout from "~/layout/Layout.astro"
+import { convertContestIdToSlug } from "~/lib/convertContestIdToSlug"
 import { getContests } from "~/lib/getContests"
 import { getTop } from "~/lib/getTop"
 
 export const getStaticPaths = (async () => {
-  const collection = await getCollection("contests")
-  return collection.map(({ id }) => ({
-    params: { id: id.replace("-", "/").replace("-", "/") },
+  const collection = await getContests()
+  return collection.map((entry) => ({
+    params: { id: convertContestIdToSlug(entry.id) },
+    props: {
+      entry,
+    },
   }))
 }) satisfies GetStaticPaths
 
-const collection = await getContests()
 const { id } = Astro.params
 const actualId = id.replaceAll("/", "-")
-const { data: contest } = collection.find(({ id }) => id === actualId)!
+const {
+  entry: { data: contest },
+} = Astro.props
+const editorial = await getCollection(
+  "editorials",
+  ({ data: { contest: contestId } }) => contestId === actualId,
+)
 const path = [
   {
     name: "홈",
@@ -77,6 +86,12 @@ const problems = contest.problems.map((problem, index) => ({
               problemNumber={number}
               problemTitle={title}
               problemAuthor={author}
+              editorial={
+                editorial.find(
+                  ({ data: { index: editorialIndex } }) =>
+                    editorialIndex === index,
+                )?.data
+              }
             />
           ))
         }

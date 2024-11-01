@@ -1,7 +1,7 @@
-import { defineConfig, presetUno } from "unocss"
+import { defineConfig, presetTypography, presetUno } from "unocss"
 
 export default defineConfig({
-  presets: [presetUno()],
+  presets: [presetUno(), presetTypography()],
   shortcuts: {
     "rank-1": "font-bold text-amber-5",
     "rank-2": "font-bold text-bluegray-6 dark:text-muted",

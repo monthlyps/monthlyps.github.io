@@ -1,5 +1,8 @@
 ---
+import type { InferEntrySchema } from "astro:content"
+import { Link } from "lucide-astro"
 import LaTeX from "~/components/LaTeX.astro"
+import { convertContestIdToSlug } from "~/lib/convertContestIdToSlug"
 
 type Props = {
   contestId: string
@@ -7,10 +10,17 @@ type Props = {
   problemNumber: string
   problemTitle: string
   problemAuthor?: string
+  editorial?: InferEntrySchema<"editorials">
 }
 
-const { contestId, problemIndex, problemNumber, problemTitle, problemAuthor } =
-  Astro.props
+const {
+  contestId,
+  problemIndex,
+  problemNumber,
+  problemTitle,
+  problemAuthor,
+  editorial,
+} = Astro.props
 ---
 
 <tr>
@@ -22,5 +32,15 @@ const { contestId, problemIndex, problemNumber, problemTitle, problemAuthor } =
     >
   </td>
   <td>{problemAuthor}</td>
-  <td></td>
+  <td
+    >{
+      editorial && (
+        <a
+          href={`/editorial/${convertContestIdToSlug(editorial.contest)}/${editorial.index}`}
+        >
+          <Link class="h-5 hover" />
+        </a>
+      )
+    }</td
+  >
 </tr>

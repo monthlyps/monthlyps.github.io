@@ -1,4 +1,6 @@
 import { defineConfig } from "astro/config"
+import rehypeKatex from "rehype-katex"
+import remarkMath from "remark-math"
 import UnoCSS from "unocss/astro"
 
 export default defineConfig({
@@ -12,5 +14,9 @@ export default defineConfig({
     ssr: {
       noExternal: ["pretendard", "@fontsource/inter"],
     },
+  },
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
   },
 })
