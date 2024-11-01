@@ -20,15 +20,13 @@ export const getStaticPaths = (async () => {
   }))
 }) satisfies GetStaticPaths
 
-const { slug } = Astro.params
 const { entry } = Astro.props
-const [year, month, tag, index] = slug.split("/")
-const id = `${year}-${month}-${tag}`
 const collection = await getContests()
 const { data: contest } = collection.find(
-  ({ id: contestId }) => contestId === id,
+  ({ id }) => id === entry.data.contest,
 )!
-const { number, title } = contest.problems[+index]
+const index = +entry.data.index
+const { number, title } = contest.problems[index]
 const path = [
   {
     name: "홈",
@@ -41,7 +39,7 @@ const path = [
   },
 ] satisfies Path
 
-const author = contest.authors?.[+index]
+const author = contest.authors?.[index]
 const { Content } = await render(entry)
 ---
 
