@@ -201,14 +201,27 @@ async function processContestFile(
   outFile: string,
   bojId: string,
 ): Promise<void> {
+  const fetchedDir = path.resolve(
+    import.meta.dirname,
+    "..",
+    "contests",
+    "fetched",
+  )
+
   const bojBoard = await fetchBojBoard(bojId)
   if (bojBoard != null) {
-    await fs.writeFile(outFile, JSON.stringify(bojBoard, null, 2))
+    await fs.writeFile(
+      path.join(fetchedDir, `${outFile}.json`),
+      JSON.stringify(bojBoard, null, 2),
+    )
     return
   }
   const spotboard = await fetchSpotboard(bojId)
   if (spotboard != null) {
-    await fs.writeFile(outFile, JSON.stringify(spotboard, null, 2))
+    await fs.writeFile(
+      path.join(fetchedDir, `${outFile}.json`),
+      JSON.stringify(spotboard, null, 2),
+    )
     return
   }
   console.error(`could not fetch contest \`${outFile}\``)
@@ -229,7 +242,7 @@ cli
 
     const contestsDir = path.resolve(import.meta.dirname, "..", "contests")
     const metadata = Metadata.parse(
-      JSON.stringify(
+      JSON.parse(
         await fs.readFile(path.join(contestsDir, "metadata.json"), {
           encoding: "utf-8",
         }),
