@@ -15,5 +15,5 @@
 
 ```shell
 # Fetch contest information of 2024-04
-pnpm fetch-single-contest 2024-04.json
+pnpm fetch-single-contest 2024-04
 ```
