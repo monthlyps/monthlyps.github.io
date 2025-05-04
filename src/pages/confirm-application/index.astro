@@ -1,0 +1,56 @@
+---
+import type { Path } from "~/components/Nav.astro"
+import Layout from "~/layout/Layout.astro"
+
+const path = [
+  {
+    name: "홈",
+    url: "/",
+  },
+  {
+    name: "Onsite 참가 신청 확인",
+    url: Astro.url.pathname,
+  },
+] satisfies Path
+---
+
+<Layout title="Onsite 참가 신청 확인" path={path}>
+  <span slot="header-title" class="px-4">Onsite 참가 신청 확인</span>
+  <main
+    class="w-full my-4 lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 flex flex-col items-stretch"
+  >
+    <main
+      class="w-full my-4 lg:max-w-6xl md:max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 flex flex-col items-stretch"
+    >
+      <input
+        type="text"
+        id="handle"
+        placeholder="검색..."
+        class="text-center flex h-10 rounded-md b b-border dark:bg-dark-9 px-3 py-2 text-sm ring-offset-white dark:ring-offset-dark-9 placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+      />
+      <div
+        id="hit"
+        class="flex flex-col items-stretch [&>div:not(:last-child)]:b-b [&>div]:b-border [&>div]:p-2 [&>div]:transition [&>div]:transition-property-[background-color] hover:[&>div]:bg-light-3 hover:dark:[&>div]:bg-dark-6 [&_a]:transition-transform [&_a:hover]:translate-y-[-0.25rem]"
+      >
+      </div>
+
+      <!-- Script for handling form submission and redirection -->
+      <script>
+        const handleInput = document.getElementById(
+          "handle",
+        ) as HTMLInputElement
+        if (handleInput) {
+          handleInput.addEventListener("keydown", (e) => {
+            // Check if the Enter key was pressed
+            if (e.key === "Enter") {
+              const handle = handleInput.value.trim()
+              if (handle) {
+                window.location.href = `/confirm-application/${handle}`
+              }
+            }
+          })
+        }
+      </script>
+    </main>
+  </main>
+</Layout>
