@@ -48,4 +48,17 @@ const editorials = defineCollection({
   }),
 })
 
-export const collections = { contests, contestsMetadata, editorials }
+const onsiteParticipants = defineCollection({
+  loader: file("./onsite-participants/data.json"),
+  schema: z.object({
+    timestamp: z.string(),
+    giftSize: z.string(),
+  }),
+})
+
+export const collections = {
+  contests,
+  contestsMetadata,
+  editorials,
+  onsiteParticipants,
+}
