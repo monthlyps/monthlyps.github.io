@@ -53,6 +53,7 @@ const onsiteParticipants = defineCollection({
   schema: z.object({
     timestamp: z.string(),
     giftSize: z.string(),
+    isStaff: z.boolean(),
   }),
 })
 
