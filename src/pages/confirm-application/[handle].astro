@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro"
 import type { Path } from "~/components/Nav.astro"
 import Layout from "~/layout/Layout.astro"
+import OnsiteContestNotice from "~/components/OnsiteContestNotice.astro"
 import { getCollection } from "astro:content"
 
 export const getStaticPaths = (async () => {
@@ -62,5 +63,7 @@ const path = [
         </tbody>
       </table>
     </div>
+
+    <OnsiteContestNotice />
   </main>
 </Layout>
