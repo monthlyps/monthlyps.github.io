@@ -1,0 +1,71 @@
+---
+import type { GetStaticPaths } from "astro"
+import type { Path } from "~/components/Nav.astro"
+import Layout from "~/layout/Layout.astro"
+import OnsiteContestNotice from "~/components/OnsiteContestNotice.astro"
+import { getCollection } from "astro:content"
+
+export const getStaticPaths = (async () => {
+  const collection = await getCollection("onsiteParticipants")
+  return [...new Set(collection.flatMap(({ id }) => id))].map((handle) => ({
+    params: { handle },
+  }))
+}) satisfies GetStaticPaths
+
+const onsiteParticipants = await getCollection("onsiteParticipants")
+const { handle } = Astro.params
+let searchResult = onsiteParticipants.find(({ id }) => id === handle)
+
+const path = [
+  {
+    name: "홈",
+    url: "/",
+  },
+  {
+    name: "Onsite 참가 신청 확인",
+    url: "/confirm-application",
+  },
+  {
+    name: handle,
+    url: Astro.url.pathname,
+  },
+] satisfies Path
+---
+
+{
+  !searchResult ? null : (
+    <Layout title="Onsite 참가 신청 확인" path={path}>
+      <span slot="header-title" class="px-4">
+        Onsite 참가 신청 확인
+      </span>
+      <main class="w-full my-4 lg:max-w-6xl md:max-w-4xl px-4 flex flex-col gap-4">
+        <div class="w-full overflow-x-auto">
+          <table class="theme-table break-words">
+            <thead>
+              <tr>
+                <td class="min-w-12">신청 일자</td>
+                <td>Handle</td>
+                <td class="min-w-12">기념품 사이즈</td>
+                {searchResult.data.isStaff ? (
+                  <td class="min-w-12">운영진</td>
+                ) : null}
+              </tr>
+            </thead>
+            <tbody>
+              {
+                <tr>
+                  <td>{searchResult.data.timestamp}</td>
+                  <td>{searchResult.id}</td>
+                  <td>{searchResult.data.giftSize}</td>
+                  {searchResult.data.isStaff ? <td>Yes</td> : null}
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+
+        <OnsiteContestNotice />
+      </main>
+    </Layout>
+  )
+}
