@@ -1,0 +1,3602 @@
+{
+  "title": "월간 향유회 2025. 04-05.",
+  "durationSeconds": 10800,
+  "participants": [
+    "gubshig",
+    "pani",
+    "kuhyaku",
+    "chlwnsgud7",
+    "jk410",
+    "leo020630",
+    "hjroh0315",
+    "sharaelong",
+    "menborong",
+    "parkky",
+    "nflight11",
+    "rlatjwls3333",
+    "shoo040113",
+    "jwpassion1",
+    "kidw0124",
+    "kwoncycle",
+    "ychangseok",
+    "w8385",
+    "tyoungs",
+    "changhw",
+    "yyyy7089",
+    "martin0327",
+    "cdg0228",
+    "ystaeyoon113",
+    "sjhi00",
+    "pgggggggggh",
+    "ez_code",
+    "oh040411",
+    "jh502125",
+    "s22024",
+    "moonlit",
+    "paull04",
+    "sjh1224",
+    "eoaud0108",
+    "ksi4495"
+  ],
+  "problems": [
+    {
+      "title": "도로 공사",
+      "number": "A"
+    },
+    {
+      "title": "벌집우주와 쿼리",
+      "number": "B"
+    },
+    {
+      "title": "gcd와 set",
+      "number": "C"
+    },
+    {
+      "title": "사라져버릴 것 같아요",
+      "number": "D"
+    },
+    {
+      "title": "분탕의 신 아이보리 3",
+      "number": "E"
+    },
+    {
+      "title": "센트로이드 트리와 복원",
+      "number": "F"
+    },
+    {
+      "title": "괄호 뒤집기",
+      "number": "G"
+    },
+    {
+      "title": "돌멩이 배치",
+      "number": "H"
+    },
+    {
+      "title": "∀nnihilation",
+      "number": "I"
+    },
+    {
+      "title": "트리와 색깔과 쿼리",
+      "number": "J"
+    }
+  ],
+  "runs": [
+    {
+      "who": "jk410",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 1
+    },
+    {
+      "who": "sjh1224",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 1
+    },
+    {
+      "who": "ychangseok",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 1
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "A",
+      "result": "INCORRECT",
+      "submissionMinute": 1
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 1
+    },
+    {
+      "who": "nflight11",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 2
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 2
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 2
+    },
+    {
+      "who": "ksi4495",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 2
+    },
+    {
+      "who": "oh040411",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 2
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 2
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 2
+    },
+    {
+      "who": "jh502125",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 3
+    },
+    {
+      "who": "leo020630",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 3
+    },
+    {
+      "who": "kidw0124",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 3
+    },
+    {
+      "who": "ez_code",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 3
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 3
+    },
+    {
+      "who": "moonlit",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 3
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 4
+    },
+    {
+      "who": "pani",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 4
+    },
+    {
+      "who": "ychangseok",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 4
+    },
+    {
+      "who": "gubshig",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 4
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 4
+    },
+    {
+      "who": "sjhi00",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 5
+    },
+    {
+      "who": "martin0327",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 5
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 5
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 5
+    },
+    {
+      "who": "leo020630",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 5
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 5
+    },
+    {
+      "who": "nflight11",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 5
+    },
+    {
+      "who": "paull04",
+      "problem": "A",
+      "result": "INCORRECT",
+      "submissionMinute": 6
+    },
+    {
+      "who": "ychangseok",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 6
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "A",
+      "result": "INCORRECT",
+      "submissionMinute": 6
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 6
+    },
+    {
+      "who": "sjh1224",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 6
+    },
+    {
+      "who": "oh040411",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 6
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 6
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 6
+    },
+    {
+      "who": "nflight11",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 7
+    },
+    {
+      "who": "oh040411",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 7
+    },
+    {
+      "who": "jk410",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 7
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 7
+    },
+    {
+      "who": "moonlit",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 7
+    },
+    {
+      "who": "oh040411",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 7
+    },
+    {
+      "who": "cdg0228",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 7
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 8
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 8
+    },
+    {
+      "who": "nflight11",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 8
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "A",
+      "result": "INCORRECT",
+      "submissionMinute": 8
+    },
+    {
+      "who": "leo020630",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 8
+    },
+    {
+      "who": "nflight11",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 9
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 9
+    },
+    {
+      "who": "moonlit",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 9
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 9
+    },
+    {
+      "who": "ychangseok",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 9
+    },
+    {
+      "who": "pani",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 9
+    },
+    {
+      "who": "ksi4495",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 9
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 9
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 9
+    },
+    {
+      "who": "nflight11",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 10
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 10
+    },
+    {
+      "who": "ychangseok",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 10
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 10
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 10
+    },
+    {
+      "who": "leo020630",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 11
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 11
+    },
+    {
+      "who": "sjhi00",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 11
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 11
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 11
+    },
+    {
+      "who": "gubshig",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 11
+    },
+    {
+      "who": "w8385",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 12
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 12
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 12
+    },
+    {
+      "who": "moonlit",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 12
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 12
+    },
+    {
+      "who": "sjhi00",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 13
+    },
+    {
+      "who": "jk410",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 13
+    },
+    {
+      "who": "gubshig",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 13
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 14
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 14
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 14
+    },
+    {
+      "who": "jh502125",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 14
+    },
+    {
+      "who": "paull04",
+      "problem": "A",
+      "result": "INCORRECT",
+      "submissionMinute": 14
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 14
+    },
+    {
+      "who": "sjh1224",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 15
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 15
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 16
+    },
+    {
+      "who": "pani",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 16
+    },
+    {
+      "who": "paull04",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 16
+    },
+    {
+      "who": "kidw0124",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 16
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 16
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 16
+    },
+    {
+      "who": "leo020630",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 16
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 16
+    },
+    {
+      "who": "moonlit",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 17
+    },
+    {
+      "who": "oh040411",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 18
+    },
+    {
+      "who": "pani",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 18
+    },
+    {
+      "who": "martin0327",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 18
+    },
+    {
+      "who": "jk410",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 19
+    },
+    {
+      "who": "paull04",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 19
+    },
+    {
+      "who": "jh502125",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 19
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 20
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 20
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 21
+    },
+    {
+      "who": "oh040411",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 22
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 22
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "A",
+      "result": "ACCEPTED",
+      "submissionMinute": 22
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 23
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 23
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 24
+    },
+    {
+      "who": "moonlit",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 25
+    },
+    {
+      "who": "gubshig",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 25
+    },
+    {
+      "who": "nflight11",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 26
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 26
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 26
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 27
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 27
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 28
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 29
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 29
+    },
+    {
+      "who": "jk410",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 29
+    },
+    {
+      "who": "kidw0124",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 29
+    },
+    {
+      "who": "oh040411",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 30
+    },
+    {
+      "who": "nflight11",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 30
+    },
+    {
+      "who": "w8385",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 30
+    },
+    {
+      "who": "sjh1224",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 31
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 31
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 31
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 32
+    },
+    {
+      "who": "ez_code",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 32
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 32
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 32
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 32
+    },
+    {
+      "who": "jk410",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 32
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 33
+    },
+    {
+      "who": "sjhi00",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 33
+    },
+    {
+      "who": "cdg0228",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 33
+    },
+    {
+      "who": "ez_code",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 34
+    },
+    {
+      "who": "leo020630",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 34
+    },
+    {
+      "who": "jk410",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 34
+    },
+    {
+      "who": "pani",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 34
+    },
+    {
+      "who": "moonlit",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 34
+    },
+    {
+      "who": "kidw0124",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 36
+    },
+    {
+      "who": "nflight11",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 37
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 38
+    },
+    {
+      "who": "cdg0228",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 39
+    },
+    {
+      "who": "pani",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 39
+    },
+    {
+      "who": "kidw0124",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 39
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 39
+    },
+    {
+      "who": "gubshig",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 39
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 40
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 41
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 42
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 42
+    },
+    {
+      "who": "w8385",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 42
+    },
+    {
+      "who": "sjh1224",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 42
+    },
+    {
+      "who": "nflight11",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 43
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 43
+    },
+    {
+      "who": "jh502125",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 43
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 44
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 44
+    },
+    {
+      "who": "nflight11",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 44
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 44
+    },
+    {
+      "who": "jk410",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 45
+    },
+    {
+      "who": "martin0327",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 46
+    },
+    {
+      "who": "jk410",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 46
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 46
+    },
+    {
+      "who": "leo020630",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 46
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 47
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 47
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 47
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 47
+    },
+    {
+      "who": "pani",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 47
+    },
+    {
+      "who": "cdg0228",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 47
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 47
+    },
+    {
+      "who": "paull04",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 48
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 48
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 49
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 49
+    },
+    {
+      "who": "leo020630",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 50
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 50
+    },
+    {
+      "who": "pani",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 50
+    },
+    {
+      "who": "jk410",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 50
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 51
+    },
+    {
+      "who": "martin0327",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 52
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 53
+    },
+    {
+      "who": "moonlit",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 53
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 53
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 53
+    },
+    {
+      "who": "jh502125",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 54
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 54
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 54
+    },
+    {
+      "who": "gubshig",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 55
+    },
+    {
+      "who": "sjhi00",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 55
+    },
+    {
+      "who": "nflight11",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 55
+    },
+    {
+      "who": "kidw0124",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 56
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 56
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 56
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 57
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 57
+    },
+    {
+      "who": "jk410",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 57
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 57
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 58
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 58
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 58
+    },
+    {
+      "who": "paull04",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 59
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 59
+    },
+    {
+      "who": "martin0327",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 60
+    },
+    {
+      "who": "paull04",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 60
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 61
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 62
+    },
+    {
+      "who": "sjh1224",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 62
+    },
+    {
+      "who": "leo020630",
+      "problem": "F",
+      "result": "INCORRECT",
+      "submissionMinute": 63
+    },
+    {
+      "who": "oh040411",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 63
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 63
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 63
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 63
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 63
+    },
+    {
+      "who": "sjh1224",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 64
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 64
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 64
+    },
+    {
+      "who": "gubshig",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 65
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 65
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 65
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 65
+    },
+    {
+      "who": "leo020630",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 65
+    },
+    {
+      "who": "martin0327",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 65
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 66
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 66
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 66
+    },
+    {
+      "who": "moonlit",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 67
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 67
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 68
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 68
+    },
+    {
+      "who": "sjh1224",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 69
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 69
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 69
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 69
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 70
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 70
+    },
+    {
+      "who": "ychangseok",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 71
+    },
+    {
+      "who": "pani",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 71
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 72
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 72
+    },
+    {
+      "who": "oh040411",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 72
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 72
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 73
+    },
+    {
+      "who": "pani",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 73
+    },
+    {
+      "who": "paull04",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 73
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 74
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 75
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 75
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 76
+    },
+    {
+      "who": "ez_code",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 77
+    },
+    {
+      "who": "kidw0124",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 77
+    },
+    {
+      "who": "sjhi00",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 78
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 78
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 79
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 79
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 79
+    },
+    {
+      "who": "jk410",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 80
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 80
+    },
+    {
+      "who": "oh040411",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 80
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 80
+    },
+    {
+      "who": "pani",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 81
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 81
+    },
+    {
+      "who": "ez_code",
+      "problem": "C",
+      "result": "ACCEPTED",
+      "submissionMinute": 82
+    },
+    {
+      "who": "pani",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 82
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 82
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 82
+    },
+    {
+      "who": "kidw0124",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 83
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 83
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 84
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 84
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 85
+    },
+    {
+      "who": "sjhi00",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 85
+    },
+    {
+      "who": "kidw0124",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 86
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 86
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 86
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 87
+    },
+    {
+      "who": "sjh1224",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 87
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 87
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 87
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 88
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 88
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 88
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 89
+    },
+    {
+      "who": "leo020630",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 89
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 89
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 90
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 90
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 91
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 92
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 92
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 93
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 94
+    },
+    {
+      "who": "gubshig",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 94
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 95
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 95
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 95
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 96
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 96
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 97
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 97
+    },
+    {
+      "who": "leo020630",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 97
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 98
+    },
+    {
+      "who": "ksi4495",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 98
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 98
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 98
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 98
+    },
+    {
+      "who": "paull04",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 98
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 99
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 100
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 100
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 100
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 100
+    },
+    {
+      "who": "nflight11",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 101
+    },
+    {
+      "who": "ychangseok",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 101
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 101
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 101
+    },
+    {
+      "who": "martin0327",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 101
+    },
+    {
+      "who": "nflight11",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 102
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 102
+    },
+    {
+      "who": "nflight11",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 103
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 103
+    },
+    {
+      "who": "leo020630",
+      "problem": "G",
+      "result": "ACCEPTED",
+      "submissionMinute": 103
+    },
+    {
+      "who": "jk410",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 103
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 104
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 105
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 105
+    },
+    {
+      "who": "paull04",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 105
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 106
+    },
+    {
+      "who": "kidw0124",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 106
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 107
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 107
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 107
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 108
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 108
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 109
+    },
+    {
+      "who": "paull04",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 109
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 109
+    },
+    {
+      "who": "paull04",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 110
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 110
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 110
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 110
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 111
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 111
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 112
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 112
+    },
+    {
+      "who": "paull04",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 112
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 112
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 113
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 113
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 113
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 113
+    },
+    {
+      "who": "paull04",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 113
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 114
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 114
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 114
+    },
+    {
+      "who": "oh040411",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 114
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 115
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 115
+    },
+    {
+      "who": "paull04",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 115
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 115
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 116
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 116
+    },
+    {
+      "who": "oh040411",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 116
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 116
+    },
+    {
+      "who": "sjhi00",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 116
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 117
+    },
+    {
+      "who": "paull04",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 117
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 118
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 118
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 119
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 119
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 119
+    },
+    {
+      "who": "paull04",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 119
+    },
+    {
+      "who": "oh040411",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 120
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 120
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 120
+    },
+    {
+      "who": "sjh1224",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 120
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 121
+    },
+    {
+      "who": "jk410",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 121
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "G",
+      "result": "ACCEPTED",
+      "submissionMinute": 121
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 121
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 121
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 122
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 122
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 122
+    },
+    {
+      "who": "gubshig",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 122
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 122
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 123
+    },
+    {
+      "who": "nflight11",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 123
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 124
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 124
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 124
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 124
+    },
+    {
+      "who": "kidw0124",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 124
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 125
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 125
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 127
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 128
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 128
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 128
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 129
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 129
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 131
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 131
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 132
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 132
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 132
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "G",
+      "result": "ACCEPTED",
+      "submissionMinute": 132
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 133
+    },
+    {
+      "who": "moonlit",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 134
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 135
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 135
+    },
+    {
+      "who": "w8385",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 135
+    },
+    {
+      "who": "martin0327",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 135
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 135
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 137
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 138
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 138
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 138
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 139
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 139
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 140
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 140
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 140
+    },
+    {
+      "who": "ychangseok",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 140
+    },
+    {
+      "who": "moonlit",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 140
+    },
+    {
+      "who": "ychangseok",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 141
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "INCORRECT",
+      "submissionMinute": 141
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 141
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 142
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "B",
+      "result": "ACCEPTED",
+      "submissionMinute": 142
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 144
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 144
+    },
+    {
+      "who": "oh040411",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 145
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 146
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 146
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 146
+    },
+    {
+      "who": "jk410",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 147
+    },
+    {
+      "who": "kidw0124",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 147
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 147
+    },
+    {
+      "who": "ez_code",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 148
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 148
+    },
+    {
+      "who": "kuhyaku",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 148
+    },
+    {
+      "who": "gubshig",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 150
+    },
+    {
+      "who": "sjh1224",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 150
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 151
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 151
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 151
+    },
+    {
+      "who": "gubshig",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 151
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 151
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 151
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 152
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 152
+    },
+    {
+      "who": "gubshig",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 152
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 152
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 153
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 154
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 154
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 154
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 155
+    },
+    {
+      "who": "ez_code",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 155
+    },
+    {
+      "who": "ychangseok",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 158
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 158
+    },
+    {
+      "who": "gubshig",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 159
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 159
+    },
+    {
+      "who": "oh040411",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 159
+    },
+    {
+      "who": "moonlit",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 159
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "H",
+      "result": "ACCEPTED",
+      "submissionMinute": 160
+    },
+    {
+      "who": "leo020630",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 160
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 160
+    },
+    {
+      "who": "ez_code",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 162
+    },
+    {
+      "who": "gubshig",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 162
+    },
+    {
+      "who": "martin0327",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 164
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 165
+    },
+    {
+      "who": "nflight11",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 165
+    },
+    {
+      "who": "sjhi00",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 166
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 166
+    },
+    {
+      "who": "nflight11",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 167
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 167
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 167
+    },
+    {
+      "who": "nflight11",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 168
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 168
+    },
+    {
+      "who": "ychangseok",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 168
+    },
+    {
+      "who": "ychangseok",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "moonlit",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ez_code",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 169
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 170
+    },
+    {
+      "who": "ychangseok",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 170
+    },
+    {
+      "who": "gubshig",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 170
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 170
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "F",
+      "result": "INCORRECT",
+      "submissionMinute": 171
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 171
+    },
+    {
+      "who": "gubshig",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 171
+    },
+    {
+      "who": "oh040411",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 171
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 171
+    },
+    {
+      "who": "oh040411",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 171
+    },
+    {
+      "who": "oh040411",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "ez_code",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "oh040411",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "ez_code",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "pgggggggggh",
+      "problem": "F",
+      "result": "ACCEPTED",
+      "submissionMinute": 172
+    },
+    {
+      "who": "oh040411",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 172
+    },
+    {
+      "who": "oh040411",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "ychangseok",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "oh040411",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "oh040411",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "oh040411",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "oh040411",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "oh040411",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "jk410",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "oh040411",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 173
+    },
+    {
+      "who": "oh040411",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 174
+    },
+    {
+      "who": "oh040411",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 174
+    },
+    {
+      "who": "oh040411",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 174
+    },
+    {
+      "who": "oh040411",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 174
+    },
+    {
+      "who": "oh040411",
+      "problem": "J",
+      "result": "INCORRECT",
+      "submissionMinute": 174
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 174
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 174
+    },
+    {
+      "who": "sjh1224",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 175
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 175
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 175
+    },
+    {
+      "who": "gubshig",
+      "problem": "D",
+      "result": "ACCEPTED",
+      "submissionMinute": 175
+    },
+    {
+      "who": "leo020630",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 175
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 175
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 175
+    },
+    {
+      "who": "paull04",
+      "problem": "F",
+      "result": "INCORRECT",
+      "submissionMinute": 175
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 176
+    },
+    {
+      "who": "sjh1224",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 176
+    },
+    {
+      "who": "w8385",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 176
+    },
+    {
+      "who": "moonlit",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 176
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 176
+    },
+    {
+      "who": "sjh1224",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 176
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 176
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 176
+    },
+    {
+      "who": "kidw0124",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "sjh1224",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "martin0327",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "sjh1224",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "paull04",
+      "problem": "F",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "sjh1224",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "pani",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "eoaud0108",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 177
+    },
+    {
+      "who": "hjroh0315",
+      "problem": "E",
+      "result": "ACCEPTED",
+      "submissionMinute": 178
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "F",
+      "result": "INCORRECT",
+      "submissionMinute": 178
+    },
+    {
+      "who": "leo020630",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 178
+    },
+    {
+      "who": "leo020630",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 178
+    },
+    {
+      "who": "kwoncycle",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 178
+    },
+    {
+      "who": "ksi4495",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 178
+    },
+    {
+      "who": "leo020630",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 178
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 178
+    },
+    {
+      "who": "jh502125",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "sjhi00",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "D",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "chlwnsgud7",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "cdg0228",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "kidw0124",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "martin0327",
+      "problem": "E",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "jk410",
+      "problem": "H",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "ystaeyoon113",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "leo020630",
+      "problem": "I",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "rlatjwls3333",
+      "problem": "C",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "jwpassion1",
+      "problem": "G",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    },
+    {
+      "who": "yyyy7089",
+      "problem": "F",
+      "result": "INCORRECT",
+      "submissionMinute": 179
+    }
+  ],
+  "penalty": 20
+}
