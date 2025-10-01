@@ -196,5 +196,16 @@
     "date": "2025-08-31",
     "bojId": "1544",
     "authors": ["pjshwa, swoon", "swoon", "pyb1031", "bubbler", "eggx50000"]
+  },
+  "2025-09": {
+    "date": "2025-09-29",
+    "bojId": "1574",
+    "authors": [
+      "lunarlity",
+      "jthis, lunarlity",
+      "bubbler",
+      "bubbler",
+      "pyb1031"
+    ]
   }
 }
