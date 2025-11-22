@@ -207,5 +207,10 @@
       "bubbler",
       "pyb1031"
     ]
+  },
+  "2025-10": {
+    "date": "2025-10-26",
+    "bojId": "1580",
+    "authors": ["pjshwa", "pyb1031", "kaorin", "joonsimjoon, jthis"]
   }
 }
