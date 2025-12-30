@@ -212,5 +212,15 @@
     "date": "2025-10-26",
     "bojId": "1580",
     "authors": ["pjshwa", "pyb1031", "kaorin", "joonsimjoon, jthis"]
+  },
+  "2025-11": {
+    "date": "2025-11-30",
+    "bojId": "1607",
+    "authors": ["swoon", "nflight11", "lunarlity", "pyb1031", "nflight11"]
+  },
+  "2025-12": {
+    "date": "2025-12-28",
+    "bojId": "1635",
+    "authors": ["cologne, snrnsidy", "lunarlity", "bubbler", "pyb1031"]
   }
 }
