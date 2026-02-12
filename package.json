@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "fmt": "prettier -w .",
     "fetch-contests": "jiti ./scripts/fetch-contest.ts --mode all",
-    "fetch-single-contest": "jiti ./scripts/fetch-contest.ts --mode single --name $1"
+    "fetch-single-contest": "jiti ./scripts/fetch-contest.ts --mode single --name $1",
+    "list-participants-by-months": "jiti ./scripts/list-participants-by-months.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
