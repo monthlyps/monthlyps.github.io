@@ -222,5 +222,39 @@
     "date": "2025-12-28",
     "bojId": "1635",
     "authors": ["cologne, snrnsidy", "lunarlity", "bubbler", "pyb1031"]
+  },
+  "2026-0102-onsite": {
+    "date": "2026-02-22",
+    "bojId": "1652",
+    "authors": [
+      "swoon",
+      "wapas",
+      "wapas",
+      "lunarlity",
+      "snrnsidy",
+      "lunarlity",
+      "lunarlity",
+      "bubbler",
+      "pyb1031",
+      "pyb1031",
+      "woohyun_jng"
+    ]
+  },
+  "2026-0102-open": {
+    "date": "2026-02-22",
+    "bojId": "1653",
+    "authors": [
+      "swoon",
+      "wapas",
+      "wapas",
+      "lunarlity",
+      "snrnsidy",
+      "lunarlity",
+      "lunarlity",
+      "bubbler",
+      "pyb1031",
+      "pyb1031",
+      "woohyun_jng"
+    ]
   }
 }
