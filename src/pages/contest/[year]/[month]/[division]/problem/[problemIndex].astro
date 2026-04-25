@@ -1,0 +1,42 @@
+---
+import type { GetStaticPaths } from "astro"
+import ProblemStatementPage from "~/components/ProblemStatementPage.astro"
+import { convertContestIdToSlug } from "~/lib/convertContestIdToSlug"
+import type { ProblemStatement } from "~/types/problem-statement"
+
+export const getStaticPaths = (() => {
+  const statementModules = import.meta.glob<ProblemStatement>(
+    "/src/data/problem-statements/**/*.json",
+    {
+      eager: true,
+      import: "default",
+    },
+  )
+  const statements = Object.values(statementModules)
+
+  return statements.flatMap((statement) => {
+    const [year, month, division] = convertContestIdToSlug(
+      statement.contestSlug,
+    ).split("/")
+    if (division == null) return []
+
+    return [
+      {
+        params: {
+          year,
+          month,
+          division,
+          problemIndex: `${statement.problemIndex}`,
+        },
+        props: {
+          statement,
+        },
+      },
+    ]
+  })
+}) satisfies GetStaticPaths
+
+const { statement } = Astro.props as { statement: ProblemStatement }
+---
+
+<ProblemStatementPage statement={statement} />

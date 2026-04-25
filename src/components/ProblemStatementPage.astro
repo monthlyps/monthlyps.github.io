@@ -1,0 +1,384 @@
+---
+import type { Path } from "~/components/Nav.astro"
+import Layout from "~/layout/Layout.astro"
+import { convertContestIdToSlug } from "~/lib/convertContestIdToSlug"
+import type { ProblemStatement } from "~/types/problem-statement"
+
+const { statement } = Astro.props as { statement: ProblemStatement }
+const path = [
+  {
+    name: "홈",
+    url: "/",
+  },
+  {
+    name: "대회",
+    url: "/contests",
+  },
+  {
+    name: statement.contestTitle,
+    url: `/contest/${convertContestIdToSlug(statement.contestSlug)}`,
+  },
+  {
+    name: statement.problemTitle,
+    url: Astro.url.pathname,
+  },
+] satisfies Path
+---
+
+<Layout title={statement.problemTitle} path={path}>
+  <span slot="header-title" class="px-4">{statement.problemTitle}</span>
+  <main
+    class="problem-page w-full my-4 lg:max-w-6xl md:max-w-4xl px-4 flex flex-col gap-6"
+  >
+    <div class="flex flex-row flex-wrap gap-2 text-gray-4 text-sm">
+      <span>
+        {statement.contestTitle}
+        {statement.problemNumber}번
+      </span>
+      <span>BOJ {statement.bojProblemId}번</span>
+    </div>
+
+    <div class="w-full overflow-x-auto">
+      <table class="theme-table problem-info">
+        <Fragment set:html={statement.infoHtml} />
+      </table>
+    </div>
+
+    <article class="problem-statement" set:html={statement.bodyHtml} />
+  </main>
+  <script is:inline>
+    ;(() => {
+      const problemStatementState = (window.__monthlypsProblemStatement ??= {})
+
+      function ensureMathJax() {
+        if (window.MathJax?.typesetPromise) {
+          return Promise.resolve(window.MathJax)
+        }
+
+        if (problemStatementState.mathJaxReady) {
+          return problemStatementState.mathJaxReady
+        }
+
+        problemStatementState.mathJaxReady = new Promise((resolve, reject) => {
+          window.MathJax = {
+            tex: {
+              inlineMath: [
+                ["$", "$"],
+                ["\\(", "\\)"],
+              ],
+              displayMath: [
+                ["$$", "$$"],
+                ["\\[", "\\]"],
+              ],
+              processEscapes: true,
+            },
+            options: {
+              skipHtmlTags: [
+                "script",
+                "noscript",
+                "style",
+                "textarea",
+                "pre",
+                "code",
+              ],
+            },
+            startup: {
+              typeset: false,
+              ready() {
+                window.MathJax.startup.defaultReady()
+                resolve(window.MathJax)
+              },
+            },
+            svg: {
+              fontCache: "global",
+            },
+          }
+
+          const mathJaxScript = document.createElement("script")
+          mathJaxScript.id = "monthlyps-mathjax"
+          mathJaxScript.src =
+            "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+          mathJaxScript.async = true
+          mathJaxScript.addEventListener("error", reject)
+          document.head.append(mathJaxScript)
+        })
+
+        return problemStatementState.mathJaxReady
+      }
+
+      function typesetProblemStatement() {
+        const statement = document.querySelector(".problem-statement")
+
+        if (!statement) {
+          return
+        }
+
+        ensureMathJax()
+          .then((mathJax) => {
+            mathJax.typesetClear?.([statement])
+            return mathJax.typesetPromise?.([statement])
+          })
+          .catch((error) => {
+            console.warn("MathJax typeset failed", error)
+          })
+      }
+
+      function setSampleCopyStatus(button, label) {
+        button.textContent = label
+        window.setTimeout(() => {
+          button.textContent = "복사"
+        }, 1200)
+      }
+
+      function copyTextWithFallback(text) {
+        if (navigator.clipboard?.writeText) {
+          return navigator.clipboard.writeText(text)
+        }
+
+        return Promise.reject(new Error("Clipboard unavailable"))
+      }
+
+      function selectSampleText(sample) {
+        const selection = window.getSelection()
+        const range = document.createRange()
+        range.selectNodeContents(sample)
+        selection?.removeAllRanges()
+        selection?.addRange(range)
+      }
+
+      function installSampleCopyButtons() {
+        document
+          .querySelectorAll(".problem-statement section[id^='sampleinput']")
+          .forEach((section) => {
+            if (section.querySelector(".sample-copy-button")) {
+              return
+            }
+
+            const headline = section.querySelector(".headline")
+            const sample = section.querySelector("pre.sampledata")
+
+            if (!(headline instanceof HTMLElement) || !sample) {
+              return
+            }
+
+            const button = document.createElement("button")
+            button.type = "button"
+            button.className = "sample-copy-button"
+            button.textContent = "복사"
+            button.setAttribute("aria-label", "예제 입력 복사")
+
+            button.addEventListener("click", async () => {
+              try {
+                await copyTextWithFallback(sample.textContent ?? "")
+                setSampleCopyStatus(button, "복사됨")
+              } catch {
+                selectSampleText(sample)
+                setSampleCopyStatus(button, "선택됨")
+              }
+            })
+
+            headline.append(button)
+          })
+      }
+
+      installSampleCopyButtons()
+      typesetProblemStatement()
+
+      if (!problemStatementState.listenerInstalled) {
+        document.addEventListener("astro:after-swap", () => {
+          installSampleCopyButtons()
+          typesetProblemStatement()
+        })
+        problemStatementState.listenerInstalled = true
+      }
+    })()
+  </script>
+</Layout>
+
+<style>
+  .problem-page :global(.problem-info) {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .problem-statement {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .problem-statement :global(.col-md-12) {
+    width: 100%;
+  }
+
+  .problem-statement :global(.row) {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .problem-statement :global(.row > .col-md-6),
+  .problem-statement :global(.row > .col-md-12) {
+    min-width: 0;
+  }
+
+  .problem-statement :global(.row > .col-md-12),
+  .problem-statement :global(.row > [class*="col-md-12"]) {
+    grid-column: 1 / -1;
+  }
+
+  .problem-statement :global(section) {
+    margin-bottom: 1.5rem;
+  }
+
+  .problem-statement :global(.headline) {
+    border-bottom: 1px solid rgb(229 231 235);
+    margin-bottom: 0.75rem;
+  }
+
+  .problem-statement :global(section[id^="sampleinput"] .headline) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .problem-statement :global(section[id^="sampleinput"] .headline h2) {
+    min-width: 0;
+  }
+
+  :global(.dark) .problem-statement :global(.headline) {
+    border-color: rgb(55 65 81);
+  }
+
+  .problem-statement :global(.sample-copy-button) {
+    flex: 0 0 auto;
+    border-radius: 0.375rem;
+    border: 1px solid rgb(209 213 219);
+    background: rgb(255 255 255);
+    color: rgb(55 65 81);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.25;
+    cursor: pointer;
+  }
+
+  .problem-statement :global(.sample-copy-button:hover) {
+    background: rgb(243 244 246);
+  }
+
+  .problem-statement :global(.sample-copy-button:focus-visible) {
+    outline: 2px solid rgb(59 130 246);
+    outline-offset: 2px;
+  }
+
+  :global(.dark) .problem-statement :global(.sample-copy-button) {
+    border-color: rgb(75 85 99);
+    background: rgb(31 41 55);
+    color: rgb(229 231 235);
+  }
+
+  :global(.dark) .problem-statement :global(.sample-copy-button:hover) {
+    background: rgb(55 65 81);
+  }
+
+  .problem-statement :global(h2) {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+  }
+
+  .problem-statement :global(p) {
+    margin: 0.75rem 0;
+  }
+
+  .problem-statement :global(ul),
+  .problem-statement :global(ol) {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .problem-statement :global(ul) {
+    list-style: disc;
+  }
+
+  .problem-statement :global(ol) {
+    list-style: decimal;
+  }
+
+  .problem-statement :global(code) {
+    border-radius: 0.25rem;
+    background: rgb(243 244 246);
+    padding: 0.1rem 0.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+  }
+
+  :global(.dark) .problem-statement :global(code) {
+    background: rgb(31 41 55);
+  }
+
+  .problem-statement :global(pre.sampledata) {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(229 231 235);
+    background: rgb(249 250 251);
+    padding: 1rem;
+    line-height: 1.5;
+  }
+
+  :global(.dark) .problem-statement :global(pre.sampledata) {
+    border-color: rgb(55 65 81);
+    background: rgb(17 24 39);
+  }
+
+  .problem-statement :global(table) {
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+
+  .problem-statement :global(td),
+  .problem-statement :global(th) {
+    border: 1px solid rgb(229 231 235);
+    padding: 0.5rem;
+  }
+
+  :global(.dark) .problem-statement :global(td),
+  :global(.dark) .problem-statement :global(th) {
+    border-color: rgb(55 65 81);
+  }
+
+  .problem-statement :global(img) {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .problem-statement :global(mjx-container[jax="SVG"] > svg) {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    max-width: none;
+  }
+
+  .problem-statement :global(video),
+  .problem-statement :global(iframe) {
+    max-width: 100%;
+  }
+
+  .problem-statement :global([style*="display:none"]) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .problem-statement :global(.row) {
+      grid-template-columns: 1fr;
+    }
+
+    .problem-statement :global(img[style*="float"]) {
+      display: block;
+      float: none !important;
+      margin: 0 auto 1rem !important;
+      padding: 0 !important;
+    }
+  }
+</style>

@@ -9,6 +9,14 @@ export default [
   ),
   eslintConfigPrettier,
   {
-    ignores: [".astro", "dist"],
+    files: ["tests/**/*.mjs"],
+    languageOptions: {
+      globals: {
+        URL: "readonly",
+      },
+    },
+  },
+  {
+    ignores: [".astro", "dist", "public/problem-assets/**"],
   },
 ]
