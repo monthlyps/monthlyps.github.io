@@ -5,7 +5,7 @@ import LaTeX from "~/components/LaTeX.astro"
 import { convertContestIdToSlug } from "~/lib/convertContestIdToSlug"
 
 type Props = {
-  contestId: string
+  contestSlug: string
   problemIndex: number
   problemNumber: string
   problemTitle: string
@@ -14,7 +14,7 @@ type Props = {
 }
 
 const {
-  contestId,
+  contestSlug,
   problemIndex,
   problemNumber,
   problemTitle,
@@ -27,8 +27,8 @@ const {
   <td>{problemNumber}</td>
   <td class="hover">
     <a
-      href={`https://www.acmicpc.net/contest/problem/${contestId}/${problemIndex}`}
-      target="_blank"><LaTeX>{problemTitle}</LaTeX></a
+      href={`/contest/${convertContestIdToSlug(contestSlug)}/problem/${problemIndex}`}
+      ><LaTeX>{problemTitle}</LaTeX></a
     >
   </td>
   <td>{problemAuthor}</td>

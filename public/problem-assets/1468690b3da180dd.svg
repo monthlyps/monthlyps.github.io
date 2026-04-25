@@ -1,0 +1,38 @@
+<svg width="800px" height="800px" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+<rect width="799.201" height="800" fill="white"/>
+<path d="M50 400H750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M50 300H750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M50 200H750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M50 700H750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M50 600H750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M50 500H750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M50 100H750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M400 50L400 750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M500 50L500 750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M600 50L600 750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M100 50L100 750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M200 50L200 750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M300 50L300 750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M700 50L700 750" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<rect x="362" y="562" width="76" height="76" fill="white" stroke="black" stroke-width="4"/>
+<path d="M399.5 619L399.5 581ZM399.5 581L383 597.625ZM399.5 581L416 597.625Z" fill="white"/>
+<path d="M399.5 619L399.5 581M399.5 581L383 597.625M399.5 581L416 597.625" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="238" y="462" width="76" height="76" transform="rotate(90 238 462)" fill="white" stroke="black" stroke-width="4"/>
+<path d="M181 499.5H219ZM219 499.5L202.375 483ZM219 499.5L202.375 516Z" fill="white"/>
+<path d="M181 499.5H219M219 499.5L202.375 483M219 499.5L202.375 516" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="438" y="238" width="76" height="76" transform="rotate(-180 438 238)" fill="white" stroke="black" stroke-width="4"/>
+<path d="M400.5 181L400.5 219ZM400.5 219L417 202.375ZM400.5 219L384 202.375Z" fill="white"/>
+<path d="M400.5 181L400.5 219M400.5 219L417 202.375M400.5 219L384 202.375" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="562" y="338" width="76" height="76" transform="rotate(-90 562 338)" fill="white" stroke="black" stroke-width="4"/>
+<path d="M619 300.5L581 300.5ZM581 300.5L597.625 317ZM581 300.5L597.625 284Z" fill="white"/>
+<path d="M619 300.5L581 300.5M581 300.5L597.625 317M581 300.5L597.625 284" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="400" cy="300" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+<circle cx="300" cy="300" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+<circle cx="500" cy="300" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+<circle cx="400" cy="400" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+<circle cx="300" cy="400" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+<circle cx="500" cy="400" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+<circle cx="400" cy="500" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+<circle cx="300" cy="500" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+<circle cx="500" cy="500" r="18" fill="#C8E4B2" stroke="black" stroke-width="4"/>
+</svg>
